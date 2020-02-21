@@ -735,20 +735,53 @@ var app = (function () {
     	let t0_value = /*$selectedState*/ ctx[0].name + "";
     	let t0;
     	let t1;
-    	let a;
+    	let ul;
+    	let li0;
     	let t2;
+    	let t3_value = /*$selectedState*/ ctx[0].dates.person + "";
+    	let t3;
+    	let t4;
+    	let li1;
+    	let t5;
+    	let t6_value = /*$selectedState*/ ctx[0].dates.online + "";
+    	let t6;
+    	let t7;
+    	let li2;
+    	let t8;
+    	let t9_value = /*$selectedState*/ ctx[0].dates.mail + "";
+    	let t9;
+    	let t10;
+    	let a;
+    	let t11;
     	let a_href_value;
 
     	const block = {
     		c: function create() {
     			h1 = element("h1");
     			t0 = text(t0_value);
-    			t1 = space();
+    			t1 = text("\nLast day to register:\n");
+    			ul = element("ul");
+    			li0 = element("li");
+    			t2 = text("in person: ");
+    			t3 = text(t3_value);
+    			t4 = space();
+    			li1 = element("li");
+    			t5 = text("online: ");
+    			t6 = text(t6_value);
+    			t7 = space();
+    			li2 = element("li");
+    			t8 = text("by mail: ");
+    			t9 = text(t9_value);
+    			t10 = space();
     			a = element("a");
-    			t2 = text("Register Now!");
+    			t11 = text("Register Now!");
     			add_location(h1, file$1, 7, 0, 148);
+    			add_location(li0, file$1, 10, 4, 210);
+    			add_location(li1, file$1, 11, 4, 264);
+    			add_location(li2, file$1, 12, 4, 315);
+    			add_location(ul, file$1, 9, 0, 201);
     			attr_dev(a, "href", a_href_value = /*baseURL*/ ctx[1] + /*$selectedState*/ ctx[0].code);
-    			add_location(a, file$1, 8, 0, 179);
+    			add_location(a, file$1, 15, 0, 368);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -757,11 +790,27 @@ var app = (function () {
     			insert_dev(target, h1, anchor);
     			append_dev(h1, t0);
     			insert_dev(target, t1, anchor);
+    			insert_dev(target, ul, anchor);
+    			append_dev(ul, li0);
+    			append_dev(li0, t2);
+    			append_dev(li0, t3);
+    			append_dev(ul, t4);
+    			append_dev(ul, li1);
+    			append_dev(li1, t5);
+    			append_dev(li1, t6);
+    			append_dev(ul, t7);
+    			append_dev(ul, li2);
+    			append_dev(li2, t8);
+    			append_dev(li2, t9);
+    			insert_dev(target, t10, anchor);
     			insert_dev(target, a, anchor);
-    			append_dev(a, t2);
+    			append_dev(a, t11);
     		},
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*$selectedState*/ 1 && t0_value !== (t0_value = /*$selectedState*/ ctx[0].name + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*$selectedState*/ 1 && t3_value !== (t3_value = /*$selectedState*/ ctx[0].dates.person + "")) set_data_dev(t3, t3_value);
+    			if (dirty & /*$selectedState*/ 1 && t6_value !== (t6_value = /*$selectedState*/ ctx[0].dates.online + "")) set_data_dev(t6, t6_value);
+    			if (dirty & /*$selectedState*/ 1 && t9_value !== (t9_value = /*$selectedState*/ ctx[0].dates.mail + "")) set_data_dev(t9, t9_value);
 
     			if (dirty & /*$selectedState*/ 1 && a_href_value !== (a_href_value = /*baseURL*/ ctx[1] + /*$selectedState*/ ctx[0].code)) {
     				attr_dev(a, "href", a_href_value);
@@ -772,6 +821,8 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(h1);
     			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(ul);
+    			if (detaching) detach_dev(t10);
     			if (detaching) detach_dev(a);
     		}
     	};
