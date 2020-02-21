@@ -1,0 +1,20 @@
+ [
+   {
+     "name": "Arkansas",
+     "code": "AK",
+     "dates": {
+       "person": "2020-03-5",
+       "online": "2020-03-5",
+       "mail": "2020-03-5"
+     }
+   },
+   {
+     "name": "California",
+     "code": "CA",
+     "dates": {
+       "person": "2020-03-3",
+       "online": "2020-02-17",
+       "mail": "2020-02-17"
+     }
+   }
+ ]
