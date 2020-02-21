@@ -17,9 +17,7 @@
 </script>
 
 {#if $selectedState}
-	 <StateInfo/>
+	 <StateInfo/><br/><button on:click={resetState}>back</button>
 {:else}
 	 <StateList/>
 {/if}
-
-<button on:click={resetState}>reset</button>

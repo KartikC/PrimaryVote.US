@@ -886,6 +886,7 @@ var app = (function () {
     			mount_component(statelist, target, anchor);
     			current = true;
     		},
+    		p: noop,
     		i: function intro(local) {
     			if (current) return;
     			transition_in(statelist.$$.fragment, local);
@@ -913,17 +914,29 @@ var app = (function () {
 
     // (19:0) {#if $selectedState}
     function create_if_block(ctx) {
+    	let br;
+    	let button;
     	let current;
+    	let dispose;
     	const stateinfo = new StateInfo({ $$inline: true });
 
     	const block = {
     		c: function create() {
     			create_component(stateinfo.$$.fragment);
+    			br = element("br");
+    			button = element("button");
+    			button.textContent = "back";
+    			add_location(br, file$2, 19, 14, 368);
+    			add_location(button, file$2, 19, 19, 373);
     		},
     		m: function mount(target, anchor) {
     			mount_component(stateinfo, target, anchor);
+    			insert_dev(target, br, anchor);
+    			insert_dev(target, button, anchor);
     			current = true;
+    			dispose = listen_dev(button, "click", resetState, false, false, false);
     		},
+    		p: noop,
     		i: function intro(local) {
     			if (current) return;
     			transition_in(stateinfo.$$.fragment, local);
@@ -935,6 +948,9 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			destroy_component(stateinfo, detaching);
+    			if (detaching) detach_dev(br);
+    			if (detaching) detach_dev(button);
+    			dispose();
     		}
     	};
 
@@ -952,10 +968,8 @@ var app = (function () {
     function create_fragment$3(ctx) {
     	let current_block_type_index;
     	let if_block;
-    	let t0;
-    	let button;
+    	let if_block_anchor;
     	let current;
-    	let dispose;
     	const if_block_creators = [create_if_block, create_else_block];
     	const if_blocks = [];
 
@@ -970,26 +984,23 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			if_block.c();
-    			t0 = space();
-    			button = element("button");
-    			button.textContent = "reset";
-    			add_location(button, file$2, 24, 0, 399);
+    			if_block_anchor = empty();
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			if_blocks[current_block_type_index].m(target, anchor);
-    			insert_dev(target, t0, anchor);
-    			insert_dev(target, button, anchor);
+    			insert_dev(target, if_block_anchor, anchor);
     			current = true;
-    			dispose = listen_dev(button, "click", resetState, false, false, false);
     		},
     		p: function update(ctx, [dirty]) {
     			let previous_block_index = current_block_type_index;
     			current_block_type_index = select_block_type(ctx);
 
-    			if (current_block_type_index !== previous_block_index) {
+    			if (current_block_type_index === previous_block_index) {
+    				if_blocks[current_block_type_index].p(ctx, dirty);
+    			} else {
     				group_outros();
 
     				transition_out(if_blocks[previous_block_index], 1, 1, () => {
@@ -1005,7 +1016,7 @@ var app = (function () {
     				}
 
     				transition_in(if_block, 1);
-    				if_block.m(t0.parentNode, t0);
+    				if_block.m(if_block_anchor.parentNode, if_block_anchor);
     			}
     		},
     		i: function intro(local) {
@@ -1019,9 +1030,7 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			if_blocks[current_block_type_index].d(detaching);
-    			if (detaching) detach_dev(t0);
-    			if (detaching) detach_dev(button);
-    			dispose();
+    			if (detaching) detach_dev(if_block_anchor);
     		}
     	};
 
