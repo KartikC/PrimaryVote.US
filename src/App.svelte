@@ -5,12 +5,6 @@
 		selectedState
 	} from './stores.js';
 
-	let selectedState_value;
-
-	const unsubscribe = selectedState.subscribe(value => {
-		selectedState_value = value;
-	});
-
 	function resetState() {
 		selectedState.set(null);
 	}
