@@ -1,10 +1,11 @@
 <script>
     import { selectedState } from './stores.js';
 
-    export let name;
+    export let data;
 
-    function handleClick(state) {
-        selectedState.set(state.name);
+    function handleClick(data) {
+        console.log(data)
+        selectedState.set(data);
     }
 </script>
 
@@ -21,6 +22,6 @@
     }
 </style>
 
-<div on:click={handleClick({name})} class="box">
-    {name}
+<div on:click={handleClick(data)} class="box">
+    {data.name}
 </div>

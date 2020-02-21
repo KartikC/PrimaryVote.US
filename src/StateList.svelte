@@ -15,5 +15,5 @@
 </script>
 
 {#each stateData as state}
-    <StateBox name={state.name}/>
+    <StateBox data={state}/>
 {/each}
