@@ -1,7 +1,9 @@
 <script>
 	import StateList from './StateList.svelte'
 	import StateInfo from './StateInfo.svelte'
-	import { selectedState } from './stores.js';
+	import {
+		selectedState
+	} from './stores.js';
 
 	let selectedState_value;
 
@@ -10,12 +12,14 @@
 	});
 
 	function resetState() {
-		selectedState.set(null)
+		selectedState.set(null);
 	}
 </script>
 
-{#if selectedState_value}
-	 <StateInfo data = {selectedState_value}/>
+{#if $selectedState}
+	 <StateInfo/>
 {:else}
 	 <StateList/>
 {/if}
+
+<button on:click={resetState}>reset</button>

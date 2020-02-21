@@ -11,7 +11,6 @@
         stateData = await res.json();
         console.log(stateData);
     });
-
 </script>
 
 {#each stateData as state}

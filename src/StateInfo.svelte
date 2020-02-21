@@ -1,7 +1,9 @@
 <script>
-
-export let data;
-
+    import {
+        selectedState
+    } from './stores.js';
+    let baseURL = 'https://iwillvote.com/register/?lang=en&state='
 </script>
 
-{data.name}
+<h1>{$selectedState.name}</h1>
+<a href="{baseURL+$selectedState.code}">Register Now!</a>

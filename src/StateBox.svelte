@@ -1,5 +1,7 @@
 <script>
-    import { selectedState } from './stores.js';
+    import {
+        selectedState
+    } from './stores.js';
 
     export let data;
 
