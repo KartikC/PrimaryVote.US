@@ -1,20 +1,13 @@
 <script>
-	import { onMount } from "svelte";
+	import StateList from './StateList.svelte'
+	import { selectedState } from './stores.js';
 
-  	let stateData = [];
+	let selectedState_value;
 
-	onMount(async () => {
-		const res = await fetch(`state-data.json`);
-		stateData = await res.json();
-		console.log(stateData);
+	const unsubscribe = selectedState.subscribe(value => {
+		selectedState_value = value;
 	});
-	
 </script>
 
-{#each stateData as state}
-	<h3>{state.name}</h3>
-	vote in person by {state.dates.person}<br>
-	vote online by {state.dates.online}<br>
-	vote via mail by {state.dates.mail}<br>
-	<br>
-{/each}
+<StateList/>
+{selectedState_value}

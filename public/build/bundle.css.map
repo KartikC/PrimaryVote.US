@@ -1,8 +1,12 @@
 {
   "version": 3,
   "file": "bundle.css",
-  "sources": [],
-  "sourcesContent": [],
+  "sources": [
+    "../../StateBox.svelte"
+  ],
+  "sourcesContent": [
+    "<script>\n    import { selectedState } from './stores.js';\n\n    export let name;\n\n    function handleClick(state) {\n        selectedState.set(state.name);\n    }\n</script>\n\n<style>\n    .box {\n        width: 300px;\n        border: 1px solid #aaa;\n        border-radius: 2px;\n        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);\n        padding: 1em;\n        margin: 0 0 1em 0;\n        text-align: center;\n        vertical-align: middle;\n    }\n</style>\n\n<div on:click={handleClick({name})} class=\"box\">\n    {name}\n</div>"
+  ],
   "names": [],
-  "mappings": ""
+  "mappings": "AAWI,IAAI,eAAC,CAAC,AACF,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,CACtB,aAAa,CAAE,GAAG,CAClB,UAAU,CAAE,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAC1C,OAAO,CAAE,GAAG,CACZ,MAAM,CAAE,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CACjB,UAAU,CAAE,MAAM,CAClB,cAAc,CAAE,MAAM,AAC1B,CAAC"
 }
