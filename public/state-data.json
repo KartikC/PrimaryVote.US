@@ -9,12 +9,46 @@
      }
    },
    {
+     "name": "Alabama",
+     "code": "AL",
+     "dates": {
+       "person": "2020-02-14",
+       "online": "2020-02-17",
+       "mail": "2020-02-17"
+     }
+   },
+   {
+     "name": "Arkansas",
+     "code": "AR",
+     "dates": {
+       "person": "2020-02-4",
+       "mail": "2020-02-4"
+     }
+   },
+   {
+     "name": "Arizona",
+     "code": "AZ",
+     "dates": {
+       "person": "2020-02-3",
+       "mail": "2020-02-3"
+     }
+   },
+   {
      "name": "California",
      "code": "CA",
      "dates": {
        "person": "2020-03-3",
        "online": "2020-02-17",
        "mail": "2020-02-17"
+     }
+   },
+      {
+     "name": "Colorado",
+     "code": "CO",
+     "dates": {
+       "person": "2020-03-3",
+       "online": "2020-02-24",
+       "mail": "2020-02-24"
      }
    }
  ]
