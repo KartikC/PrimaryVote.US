@@ -41,6 +41,16 @@
     }
 </script>
 
+<style>
+	.flex-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+</style>
+
+<div class="flex-container">
 <h1>{state.name}</h1>
 {#if bestOption()}
     <Countdown>
@@ -55,3 +65,4 @@
 {:else}
     it may be too late to register but you can double check <a href="{baseURL+state.code}" target="_blank">here.</a>
 {/if}
+</div>
