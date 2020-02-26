@@ -23,6 +23,19 @@
 		justify-content: center;
 		align-items: center;
 	}
+
+	    :global(a:link, a:active, a:visited) {
+		color: rgb(196, 248, 255);
+	}
+
+	:global(a:hover) {
+		color: rgb(196, 212, 255);
+	}
+
+	:global(body) {
+		background-color: rgb(26, 26, 26);
+		color: bisque;
+	}
 </style>
 
 <svelte:head>
