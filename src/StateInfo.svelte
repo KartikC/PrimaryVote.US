@@ -48,8 +48,10 @@
     <span slot="type">{bestOption()[1]}</span>
     </Countdown><br/>
     <a href="{baseURL+state.code}">Register Now!</a>
-    -or-
+    {#if bestOption()[0] > 7}
+    -or-<br/>
     <ReminderModule/>
+    {/if}
 {:else}
     it may be too late to register but you can double check <a href="{baseURL+state.code}">here.</a>
 {/if}
