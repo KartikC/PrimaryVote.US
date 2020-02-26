@@ -30,15 +30,15 @@
     }
 
     function bestOption() {
-		if( getDaysUntil(onlineDate) ) {
-			return [getDaysUntil(onlineDate), "online"]
-		} else if ( getDaysUntil(mailDate)) {
-			return [getDaysUntil(mailDate), "by mail"]
-		} else if ( getDaysUntil(personDate) ) {
-			return [getDaysUntil(personDate), "in person"]
-		} else
-			return null
-	}
+        if (getDaysUntil(onlineDate)) {
+            return [getDaysUntil(onlineDate), "online"]
+        } else if (getDaysUntil(mailDate)) {
+            return [getDaysUntil(mailDate), "by mail"]
+        } else if (getDaysUntil(personDate)) {
+            return [getDaysUntil(personDate), "in person"]
+        } else
+            return null
+    }
 </script>
 
 <h1>{state.name}</h1>
