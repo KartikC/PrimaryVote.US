@@ -184,5 +184,218 @@
       "online": "2020-04-07",
       "mail": "2020-04-07"
     }
+  },
+  "ME": {
+    "name": "Maine",
+    "code": "ME",
+    "dates": {
+      "person": "2020-03-03",
+      "mail": "2020-02-10"
+    }
+  },
+  "MI": {
+    "name": "Michigan",
+    "code": "MI",
+    "dates": {
+      "person": "2020-02-24",
+      "online": "2020-02-24",
+      "mail": "2020-02-24"
+    }
+  },
+  "MN": {
+    "name": "Minnesota",
+    "code": "MN",
+    "dates": {
+      "person": "2020-03-03",
+      "online": "2020-02-11",
+      "mail": "2020-02-11"
+    }
+  },
+  "MO": {
+    "name": "Missouri",
+    "code": "MO",
+    "dates": {
+      "person": "2020-02-12",
+      "online": "2020-02-12",
+      "mail": "2020-02-12"
+    }
+  },
+  "MP": {
+    "name": "Northern Mariana",
+    "code": "MP",
+    "dates": {
+      "person": "2020-01-14",
+      "mail": "2020-01-14"
+    }
+  },
+  "MS": {
+    "name": "Mississippi",
+    "code": "MS",
+    "dates": {
+      "person": "2020-02-10",
+      "mail": "2020-02-10"
+    }
+  },
+  "MT": {
+    "name": "Montana",
+    "code": "MT",
+    "dates": {
+      "person": "2020-06-02",
+      "mail": "2020-05-04"
+    }
+  },
+  "NC": {
+    "name": "North Carolina",
+    "code": "NC",
+    "dates": {
+      "person": "2020-03-03",
+      "mail": "2020-02-07"
+    }
+  },
+  "ND": {
+    "name": "North Dakota",
+    "code": "ND",
+    "dates": {
+      "person": "2020-03-10",
+      "mail": "2020-02-10"
+    }
+  },
+  "NE": {
+    "name": "Nebraska",
+    "code": "NE",
+    "dates": {
+      "person": "2020-05-01",
+      "online": "2020-04-24",
+      "mail": "2020-04-24"
+    }
+  },
+  "NH": {
+    "name": "New Hampshire",
+    "code": "NH",
+    "dates": {
+      "person": "2020-02-11",
+      "mail": "2020-02-04"
+    }
+  },
+  "NJ": {
+    "name": "New Jersey",
+    "code": "NJ",
+    "dates": {
+      "person": "2020-05-12",
+      "mail": "2020-05-12"
+    }
+  },
+  "NM": {
+    "name": "New Mexico",
+    "code": "NM",
+    "dates": {
+      "person": "2020-05-05",
+      "online": "2020-05-05",
+      "mail": "2020-05-05"
+    }
+  },
+  "NV": {
+    "name": "Nevada",
+    "code": "NV",
+    "dates": {
+      "person": "2020-02-22",
+      "online": "2020-02-03",
+      "mail": "2020-01-29"
+    }
+  },
+  "NY": {
+    "name": "New York",
+    "code": "NY",
+    "dates": {
+      "person": "2020-04-03",
+      "online": "2020-04-03",
+      "mail": "2020-04-03"
+    }
+  },
+  "OH": {
+    "name": "Ohio",
+    "code": "OH",
+    "dates": {
+      "person": "2020-02-17",
+      "online": "2020-02-17",
+      "mail": "2020-02-17"
+    }
+  },
+  "OK": {
+    "name": "Oklahoma",
+    "code": "OK",
+    "dates": {
+      "person": "2020-02-07",
+      "mail": "2020-02-07"
+    }
+  },
+  "OR": {
+    "name": "Oregon",
+    "code": "OR",
+    "dates": {
+      "person": "2020-04-28",
+      "online": "2020-04-28",
+      "mail": "2020-04-28"
+    }
+  },
+  "PA": {
+    "name": "Pennsylvania",
+    "code": "PA",
+    "dates": {
+      "person": "2020-03-30",
+      "online": "2020-03-30",
+      "mail": "2020-03-30"
+    }
+  },
+  "PR": {
+    "name": "Puerto Rico",
+    "code": "PR",
+    "dates": {
+      "person": "2020-02-08",
+      "mail": "2020-02-08"
+    }
+  },
+  "RI": {
+    "name": "Rhode Island",
+    "code": "RI",
+    "dates": {
+      "person": "2020-03-29",
+      "online": "2020-03-29",
+      "mail": "2020-03-29"
+    }
+  },
+  "SC": {
+    "name": "South Carolina",
+    "code": "SC",
+    "dates": {
+      "person": "2020-01-30",
+      "online": "2020-01-30",
+      "mail": "2020-01-30"
+    }
+  },
+  "SD": {
+    "name": "South Dakota",
+    "code": "SD",
+    "dates": {
+      "person": "2020-05-18",
+      "mail": "2020-05-18"
+    }
+  },
+  "TN": {
+    "name": "Tennessee",
+    "code": "TN",
+    "dates": {
+      "person": "2020-02-03",
+      "online": "2020-02-03",
+      "mail": "2020-02-03"
+    }
+  },
+  "TX": {
+    "name": "Texas",
+    "code": "TX",
+    "dates": {
+      "person": "2020-02-03",
+      "mail": "2020-02-03"
+    }
   }
 }
