@@ -1,5 +1,5 @@
 <script>
-    let userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone
+    let remindURL = 'https://www.vote.org/election-reminders/';
 </script>
 
-reminder module goes here!
+<a href="{remindURL}" target="_blank">Remind me later</a>

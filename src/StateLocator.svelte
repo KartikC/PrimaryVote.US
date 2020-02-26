@@ -9,6 +9,8 @@
 
     let stateLocs = [];
     let currentLocation = null;
+    let loadingLocation = false;
+    let loadingDenied = false;
 
     onMount(async () => {
         const res = await fetch(`us-states-loc.json`);
@@ -60,10 +62,10 @@
     }
 
     function error(err) {
+        loadingLocation = false;
+        loadingDenied = true;
         console.warn(`ERROR(${err.code}): ${err.message}`);
     }
-
-    let loadingLocation = false;
 
     function getLocation() {
         navigator.geolocation.getCurrentPosition(success, error);
@@ -74,8 +76,10 @@
         getLocation();
     }
 </script>
-<button on:click={locatePressed}>Locate Me!</button>
-{#if loadingLocation}
-     loading...
+{#if !loadingDenied}
+    <button on:click={locatePressed}>Locate Me!</button>
+    {#if loadingLocation}
+        loading...
+    {/if}
+    <br />-or-<br />
 {/if}
-<br />-or-<br />
