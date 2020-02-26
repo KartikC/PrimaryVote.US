@@ -1,5 +1,5 @@
-[
-  {
+{
+  "AK": {
     "name": "Alaska",
     "code": "AK",
     "dates": {
@@ -8,7 +8,7 @@
       "mail": "2020-03-5"
     }
   },
-  {
+  "AL": {
     "name": "Alabama",
     "code": "AL",
     "dates": {
@@ -17,7 +17,7 @@
       "mail": "2020-02-17"
     }
   },
-  {
+  "AR": {
     "name": "Arkansas",
     "code": "AR",
     "dates": {
@@ -25,7 +25,7 @@
       "mail": "2020-02-4"
     }
   },
-  {
+  "AZ": {
     "name": "Arizona",
     "code": "AZ",
     "dates": {
@@ -33,7 +33,7 @@
       "mail": "2020-02-3"
     }
   },
-  {
+  "CA": {
     "name": "California",
     "code": "CA",
     "dates": {
@@ -42,7 +42,7 @@
       "mail": "2020-02-17"
     }
   },
-  {
+  "CO": {
     "name": "Colorado",
     "code": "CO",
     "dates": {
@@ -51,7 +51,7 @@
       "mail": "2020-02-24"
     }
   },
-  {
+  "CT": {
     "name": "Connecticut",
     "code": "CT",
     "dates": {
@@ -60,7 +60,7 @@
       "mail": "2020-04-23"
     }
   },
-  {
+  "DC": {
     "name": "District of Columbia",
     "code": "DC",
     "dates": {
@@ -69,4 +69,4 @@
       "mail": "2020-05-12"
     }
   }
-]
+}
