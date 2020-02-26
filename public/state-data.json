@@ -68,5 +68,121 @@
       "online": "2020-5-12",
       "mail": "2020-05-12"
     }
+  },
+  "DE": {
+    "name": "Delaware",
+    "code": "DE",
+    "dates": {
+      "person": "2020-04-04",
+      "online": "2020-04-04",
+      "mail": "2020-04-04"
+    }
+  },
+  "FL": {
+    "name": "Florida",
+    "code": "FL",
+    "dates": {
+      "person": "2020-02-18",
+      "online": "2020-02-18",
+      "mail": "2020-02-18"
+    }
+  },
+  "GA": {
+    "name": "Georgia",
+    "code": "GA",
+    "dates": {
+      "person": "2020-02-24",
+      "online": "2020-02-24",
+      "mail": "2020-02-24"
+    }
+  },
+  "GU": {
+    "name": "Guam",
+    "code": "GA",
+    "dates": {
+      "person": "2020-04-22",
+      "mail": "2020-04-22"
+    }
+  },
+  "HI": {
+    "name": "Hawaii",
+    "code": "HI",
+    "dates": {
+      "person": "2020-03-05",
+      "online": "2020-03-05",
+      "mail": "2020-03-05"
+    }
+  },
+  "IA": {
+    "name": "Iowa",
+    "code": "IA",
+    "dates": {
+      "person": "2020-02-03",
+      "online": "2020-01-24",
+      "mail": "2020-01-19"
+    }
+  },
+  "ID": {
+    "name": "Idaho",
+    "code": "ID",
+    "dates": {
+      "person": "2020-03-10",
+      "online": "2020-02-28",
+      "mail": "2020-02-14"
+    }
+  },
+  "IL": {
+    "name": "Illinois",
+    "code": "IL",
+    "dates": {
+      "person": "2020-03-17",
+      "online": "2020-02-29",
+      "mail": "2020-02-18"
+    }
+  },
+  "IN": {
+    "name": "Indiana",
+    "code": "IN",
+    "dates": {
+      "person": "2020-04-06",
+      "online": "2020-04-06",
+      "mail": "2020-04-06"
+    }
+  },
+  "KS": {
+    "name": "Kansas",
+    "code": "KS",
+    "dates": {
+      "person": "2020-05-02",
+      "online": "2020-04-11",
+      "mail": "2020-04-25"
+    }
+  },
+  "KY": {
+    "name": "Kentucky",
+    "code": "KY",
+    "dates": {
+      "person": "2020-04-20",
+      "online": "2020-04-20",
+      "mail": "2020-04-20"
+    }
+  },
+  "MA": {
+    "name": "Massachusetts",
+    "code": "MA",
+    "dates": {
+      "person": "2020-02-12",
+      "online": "2020-02-12",
+      "mail": "2020-02-12"
+    }
+  },
+  "MD": {
+    "name": "Maryland",
+    "code": "MD",
+    "dates": {
+      "person": "2020-04-28",
+      "online": "2020-04-07",
+      "mail": "2020-04-07"
+    }
   }
 }
