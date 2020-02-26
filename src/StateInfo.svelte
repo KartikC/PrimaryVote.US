@@ -3,6 +3,7 @@
         selectedState
     } from './stores.js';
     import ReminderModule from './ReminderModule.svelte'
+    import Countdown from './Countdown.svelte'
 
     let baseURL = 'https://iwillvote.com/register/?lang=en&state='
     let selectedState_value;
@@ -19,19 +20,36 @@
     }
     let mailDate = new Date(selectedState_value.dates.mail);
 
+    function getDaysUntil(date) {
+        let daysUntil = Math.floor((date - new Date()) / (1000 * 60 * 60 * 24))
+        if (daysUntil >= 0) {
+            return daysUntil
+        } else {
+            return null
+        }
+    }
+
+    function bestOption() {
+		if( getDaysUntil(onlineDate) ) {
+			return [getDaysUntil(onlineDate), "online"]
+		} else if ( getDaysUntil(mailDate)) {
+			return [getDaysUntil(mailDate), "by mail"]
+		} else if ( getDaysUntil(personDate) ) {
+			return [getDaysUntil(personDate), "in person"]
+		} else
+			return null
+	}
 </script>
 
 <h1>{state.name}</h1>
-Last day to register:
-<ul>
-    <li>in person: {personDate.toDateString()}</li>
-    {#if onlineDate}
-         <li>online: {onlineDate.toDateString()}</li>
-    {:else}
-         <li>online: not available in your state</li>
-    {/if}
-    <li>by mail: {mailDate.toDateString()}</li>
-</ul>
-<a href="{baseURL+state.code}">Register Now!</a>
--or-
-<ReminderModule/>
+{#if bestOption()}
+    <Countdown>
+    <span slot="days">{bestOption()[0]}</span>
+    <span slot="type">{bestOption()[1]}</span>
+    </Countdown><br/>
+    <a href="{baseURL+state.code}">Register Now!</a>
+    -or-
+    <ReminderModule/>
+{:else}
+    it may be too late to register but you can double check <a href="{baseURL+state.code}">here.</a>
+{/if}
