@@ -62,6 +62,8 @@
         console.warn(`ERROR(${err.code}): ${err.message}`);
     }
 
+    //let promise = getLocation();
+
     function getLocation() {
         navigator.geolocation.getCurrentPosition(success, error);
     }
@@ -70,4 +72,12 @@
         getLocation();
     }
 </script>
-<button on:click={locatePressed}>Locate Me!</button><br />-or-<br />
+<button on:click={locatePressed}>Locate Me!</button>
+<!-- {#await promise}
+	<p>...loading</p>
+{:then number}
+	<p>The number is {number}</p>
+{:catch error}
+	<p style="color: red">{error.message}</p>
+{/await} -->
+<br />-or-<br />

@@ -11,7 +11,8 @@
 	}
 
 	function supportsGeolocation() {
-		return ((navigator.geolocation !== null) && (navigator.geolocation !== undefined));
+		//return ((navigator.geolocation !== null) && (navigator.geolocation !== undefined));
+		return true;
 	}
 </script>
 
