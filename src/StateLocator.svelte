@@ -55,6 +55,7 @@
         currentLocation = pos.coords;
         currentLocation["lat"] = pos.coords.latitude;
         currentLocation["lon"] = pos.coords.longitude;
+        loadingLocation = false;
         selectedState.set($stateData[getState()["code"]]);
     }
 
@@ -62,22 +63,19 @@
         console.warn(`ERROR(${err.code}): ${err.message}`);
     }
 
-    //let promise = getLocation();
+    let loadingLocation = false;
 
     function getLocation() {
         navigator.geolocation.getCurrentPosition(success, error);
     }
 
     function locatePressed() {
+        loadingLocation = true;
         getLocation();
     }
 </script>
 <button on:click={locatePressed}>Locate Me!</button>
-<!-- {#await promise}
-	<p>...loading</p>
-{:then number}
-	<p>The number is {number}</p>
-{:catch error}
-	<p style="color: red">{error.message}</p>
-{/await} -->
+{#if loadingLocation}
+     loading...
+{/if}
 <br />-or-<br />
