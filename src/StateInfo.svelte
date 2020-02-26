@@ -39,6 +39,8 @@
         } else
             return null
     }
+
+    let bestOptionResult = bestOption();
 </script>
 
 <style>
@@ -47,18 +49,15 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-	}
+    }
 </style>
 
 <div class="flex-container">
 <h1>{state.name}</h1>
-{#if bestOption()}
-    <Countdown>
-    <span slot="days">{bestOption()[0]}</span>
-    <span slot="type">{bestOption()[1]}</span>
-    </Countdown><br/>
+{#if bestOptionResult}
+    <Countdown data={bestOptionResult} />
     <a href="{baseURL+state.code}" target="_blank">Register Now!</a>
-    {#if bestOption()[0] > 7}
+    {#if bestOptionResult[0] > 7}
     <br/>-or-<br/>
     <ReminderModule/>
     {/if}

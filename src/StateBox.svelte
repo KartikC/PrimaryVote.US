@@ -6,17 +6,16 @@
     export let data;
 
     function handleClick(data) {
-        console.log(data)
         selectedState.set(data);
     }
 </script>
 
 <style>
     .box {
-        background-color: #f1f1f1;
+        background-color: #161616;
         width: 300px;
         margin: 10px;
-        border: 1px solid #aaa;
+        border: 1px solid black;
         border-radius: 2px;
         box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
         padding: 1em;
