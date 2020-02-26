@@ -766,7 +766,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			t = text("reminder module goes here");
+    			t = text("reminder module goes here!");
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
