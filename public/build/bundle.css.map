@@ -2,13 +2,13 @@
   "version": 3,
   "file": "bundle.css",
   "sources": [
-    "../../Countdown.svelte",
-    "../../StateBox.svelte"
+    "../../StateBox.svelte",
+    "../../Countdown.svelte"
   ],
   "sourcesContent": [
-    "<style>\n    .day {\n        color: green;\n    }\n</style>\n\n\nYou have\n<span class=\"day\">\n    <slot name=\"days\">\n        <span class=\"missing\">ERROR</span>\n    </slot>\n</span>\ndays to register\n<slot name=\"type\">\n    <span class=\"missing\">ERROR</span>\n</slot>",
-    "<script>\n    import {\n        selectedState\n    } from './stores.js';\n\n    export let data;\n\n    function handleClick(data) {\n        console.log(data)\n        selectedState.set(data);\n    }\n</script>\n\n<style>\n    .box {\n        width: 300px;\n        border: 1px solid #aaa;\n        border-radius: 2px;\n        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);\n        padding: 1em;\n        margin: 0 0 1em 0;\n        text-align: center;\n        vertical-align: middle;\n    }\n</style>\n\n<div on:click={handleClick(data)} class=\"box\">\n    {data.name}\n</div>"
+    "<script>\n    import {\n        selectedState\n    } from './stores.js';\n\n    export let data;\n\n    function handleClick(data) {\n        console.log(data)\n        selectedState.set(data);\n    }\n</script>\n\n<style>\n    .box {\n        width: 300px;\n        border: 1px solid #aaa;\n        border-radius: 2px;\n        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);\n        padding: 1em;\n        margin: 0 0 1em 0;\n        text-align: center;\n        vertical-align: middle;\n    }\n</style>\n\n<div on:click={handleClick(data)} class=\"box\">\n    {data.name}\n</div>",
+    "<style>\n    .day {\n        color: green;\n    }\n</style>\n\n\nYou have\n<span class=\"day\">\n    <slot name=\"days\">\n        <span class=\"missing\">ERROR</span>\n    </slot>\n</span>\ndays to register\n<slot name=\"type\">\n    <span class=\"missing\">ERROR</span>\n</slot>"
   ],
   "names": [],
-  "mappings": "AACI,IAAI,eAAC,CAAC,AACF,KAAK,CAAE,KAAK,AAChB,CAAC;ACWD,IAAI,eAAC,CAAC,AACF,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,CACtB,aAAa,CAAE,GAAG,CAClB,UAAU,CAAE,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAC1C,OAAO,CAAE,GAAG,CACZ,MAAM,CAAE,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CACjB,UAAU,CAAE,MAAM,CAClB,cAAc,CAAE,MAAM,AAC1B,CAAC"
+  "mappings": "AAcI,IAAI,eAAC,CAAC,AACF,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,CACtB,aAAa,CAAE,GAAG,CAClB,UAAU,CAAE,GAAG,CAAC,GAAG,CAAC,GAAG,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAC1C,OAAO,CAAE,GAAG,CACZ,MAAM,CAAE,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAAC,CACjB,UAAU,CAAE,MAAM,CAClB,cAAc,CAAE,MAAM,AAC1B,CAAC;ACtBD,IAAI,eAAC,CAAC,AACF,KAAK,CAAE,KAAK,AAChB,CAAC"
 }
