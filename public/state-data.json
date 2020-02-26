@@ -3,9 +3,9 @@
     "name": "Alaska",
     "code": "AK",
     "dates": {
-      "person": "2020-03-5",
-      "online": "2020-03-5",
-      "mail": "2020-03-5"
+      "person": "2020-03-05",
+      "online": "2020-03-05",
+      "mail": "2020-03-05"
     }
   },
   "AL": {
@@ -21,23 +21,23 @@
     "name": "Arkansas",
     "code": "AR",
     "dates": {
-      "person": "2020-02-4",
-      "mail": "2020-02-4"
+      "person": "2020-02-04",
+      "mail": "2020-02-04"
     }
   },
   "AZ": {
     "name": "Arizona",
     "code": "AZ",
     "dates": {
-      "person": "2020-02-3",
-      "mail": "2020-02-3"
+      "person": "2020-02-03",
+      "mail": "2020-02-03"
     }
   },
   "CA": {
     "name": "California",
     "code": "CA",
     "dates": {
-      "person": "2020-03-3",
+      "person": "2020-03-03",
       "online": "2020-02-17",
       "mail": "2020-02-17"
     }
@@ -46,7 +46,7 @@
     "name": "Colorado",
     "code": "CO",
     "dates": {
-      "person": "2020-03-3",
+      "person": "2020-03-03",
       "online": "2020-02-24",
       "mail": "2020-02-24"
     }
@@ -64,7 +64,7 @@
     "name": "District of Columbia",
     "code": "DC",
     "dates": {
-      "person": "2020-06-2",
+      "person": "2020-06-02",
       "online": "2020-5-12",
       "mail": "2020-05-12"
     }

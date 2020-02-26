@@ -995,7 +995,7 @@ var app = (function () {
     			a = element("a");
     			t1 = text("here.");
     			attr_dev(a, "href", a_href_value = /*baseURL*/ ctx[1] + /*state*/ ctx[0].code);
-    			add_location(a, file$2, 55, 60, 1610);
+    			add_location(a, file$2, 55, 60, 1669);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
@@ -1062,9 +1062,9 @@ var app = (function () {
     			t2 = space();
     			if (if_block) if_block.c();
     			if_block_anchor = empty();
-    			add_location(br, file$2, 48, 16, 1407);
+    			add_location(br, file$2, 48, 16, 1466);
     			attr_dev(a, "href", a_href_value = /*baseURL*/ ctx[1] + /*state*/ ctx[0].code);
-    			add_location(a, file$2, 49, 4, 1417);
+    			add_location(a, file$2, 49, 4, 1476);
     		},
     		m: function mount(target, anchor) {
     			mount_component(countdown, target, anchor);
@@ -1132,7 +1132,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = `${/*bestOption*/ ctx[2]()[0]}`;
     			attr_dev(span, "slot", "days");
-    			add_location(span, file$2, 46, 4, 1301);
+    			add_location(span, file$2, 46, 4, 1360);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -1163,7 +1163,7 @@ var app = (function () {
     			span = element("span");
     			span.textContent = `${/*bestOption*/ ctx[2]()[1]}`;
     			attr_dev(span, "slot", "type");
-    			add_location(span, file$2, 47, 4, 1348);
+    			add_location(span, file$2, 47, 4, 1407);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -1231,7 +1231,7 @@ var app = (function () {
     			br = element("br");
     			t1 = space();
     			create_component(remindermodule.$$.fragment);
-    			add_location(br, file$2, 51, 8, 1504);
+    			add_location(br, file$2, 51, 8, 1563);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
@@ -1295,7 +1295,7 @@ var app = (function () {
     			t1 = space();
     			if_block.c();
     			if_block_anchor = empty();
-    			add_location(h1, file$2, 43, 0, 1240);
+    			add_location(h1, file$2, 43, 0, 1299);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
