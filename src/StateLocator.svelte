@@ -11,6 +11,7 @@
     let currentLocation = null;
     let loadingLocation = false;
     let loadingDenied = false;
+    let src = 'temp-loader.gif';
 
     onMount(async () => {
         const res = await fetch(`us-states-loc.json`);
@@ -79,7 +80,7 @@
 {#if !loadingDenied}
     <button on:click={locatePressed}>Locate Me!</button>
     {#if loadingLocation}
-        loading...
+        <img {src} alt="loading...">
     {/if}
     <div>-or-</div>
 {/if}
