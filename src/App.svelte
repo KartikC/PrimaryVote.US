@@ -16,11 +16,29 @@
 	}
 </script>
 
+<style>
+	.flex-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+</style>
+
+<svelte:head>
+	<title>Can I Still Vote? - PrimaryVote.US</title>
+	<html lang="en" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</svelte:head>
+
+
 {#if $selectedState}
-	 <StateInfo/><br/><button on:click={resetState}>back</button>
+	 <StateInfo/><button on:click={resetState}>back</button>
 {:else}
-	{#if supportsGeolocation()}
-	<StateLocator/>
-	{/if}
-	<StateList/>
+	<div class="flex-container">
+		{#if supportsGeolocation()}
+		<StateLocator/>
+		{/if}
+		<StateList/>
+	</div>
 {/if}

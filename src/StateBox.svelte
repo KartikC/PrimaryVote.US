@@ -13,7 +13,9 @@
 
 <style>
     .box {
+        background-color: #f1f1f1;
         width: 300px;
+        margin: 10px;
         border: 1px solid #aaa;
         border-radius: 2px;
         box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);

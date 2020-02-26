@@ -81,5 +81,5 @@
     {#if loadingLocation}
         loading...
     {/if}
-    <br />-or-<br />
+    <div>-or-</div>
 {/if}
