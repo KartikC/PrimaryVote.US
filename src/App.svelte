@@ -22,19 +22,19 @@
 	}
 
 	.wrapper>.header {
-		height: 35%;
-		background: #1835A5;
+		height: 25%;
+		background: #E8F1F2;
 	}
 
 	.wrapper>.main {
-		height: 55%;
-		background: #E8F1F2;
+		height: 65%;
+		background: #1835A5;
 		overflow: scroll;
 	}
 
 	.wrapper>.footer {
 		height: 10%;
-		background: #E8F1F2;
+		background: #1835A5;
 	}
 
 	:global(a:link, a:active, a:visited) {

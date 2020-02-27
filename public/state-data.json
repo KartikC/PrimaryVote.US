@@ -61,7 +61,7 @@
     }
   },
   "DC": {
-    "name": "District of Columbia",
+    "name": "DC",
     "code": "DC",
     "dates": {
       "person": "2020-06-02",
@@ -98,7 +98,7 @@
   },
   "GU": {
     "name": "Guam",
-    "code": "GA",
+    "code": "GU",
     "dates": {
       "person": "2020-04-22",
       "mail": "2020-04-22"

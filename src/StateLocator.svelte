@@ -4,7 +4,8 @@
     } from "svelte";
 
     import {
-        selectedState, stateData
+        selectedState,
+        stateData
     } from './stores.js';
 
     let stateLocs = [];
@@ -79,21 +80,41 @@
 </script>
 
 <style>
-.text {
-    size: 5em;
-}
-.top {
-    color: #E8F1F2;
-}
-.locate {
-    color: #1B98E0;
-}
+    .wrapper {
+        padding: 5px;
+        height: 100%;
+        position: relative;
+    }
+
+    .text {
+        font-weight: bold;
+        font-size: 2em;
+    }
+
+    .top {
+        color: #1835A5;
+        left: 5px;
+        top: 5px;
+    }
+
+    .locate {
+        color: #1B98E0;
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+    }
 </style>
 
-<span class="text top">HOW MANY DAYS DO I HAVE LEFT TO REGISTER?</span>
-{#if !loadingDenied}
-    <span class="text locate" on:click={locatePressed}><img src={'nav-icon.svg'} alt="nav-icon"/>LOCATE ME</span>
-    {#if loadingLocation}
-        <img {src} alt="loading...">
+<div class="wrapper">
+    <div class="top">
+        <span class="text">HOW MANY DAYS DO I HAVE LEFT TO REGISTER?</span>
+    </div>
+    <div class="locate" on:click={locatePressed}>
+    {#if !loadingDenied}
+        <img src={'nav-icon.svg'} alt="nav-icon"/><br/><span class="text">LOCATE ME</span>
+        {#if loadingLocation}
+            <img {src} alt="loading...">
+        {/if}
     {/if}
-{/if}
+    </div>
+</div>
