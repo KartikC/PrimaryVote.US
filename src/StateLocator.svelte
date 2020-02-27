@@ -77,10 +77,23 @@
         getLocation();
     }
 </script>
+
+<style>
+.text {
+    size: 5em;
+}
+.top {
+    color: #E8F1F2;
+}
+.locate {
+    color: #1B98E0;
+}
+</style>
+
+<span class="text top">HOW MANY DAYS DO I HAVE LEFT TO REGISTER?</span>
 {#if !loadingDenied}
-    <button on:click={locatePressed}>Locate Me!</button>
+    <span class="text locate" on:click={locatePressed}><img src={'nav-icon.svg'} alt="nav-icon"/>LOCATE ME</span>
     {#if loadingLocation}
         <img {src} alt="loading...">
     {/if}
-    <div>-or-</div>
 {/if}

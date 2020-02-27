@@ -12,19 +12,19 @@
 
 <style>
     .box {
-        background-color: #161616;
-        width: 300px;
+        background-color: #E8F1F2;
+        color: #1835A5;
+        width: 321px;
+        height: 71px;
         margin: 10px;
-        border: 1px solid black;
-        border-radius: 2px;
-        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-        padding: 1em;
-        margin: 0 0 1em 0;
+        border: 3px solid #1835A5;
+        box-sizing: border-box;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
         text-align: center;
-        vertical-align: middle;
     }
 </style>
 
 <div on:click={handleClick(data)} class="box">
-    {data.name}
+    {data.name.toUpperCase()}
 </div>

@@ -16,24 +16,33 @@
 </script>
 
 <style>
-	.flex-container {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+	.wrapper {
+		width: 100%;
+		height: 100%;
 	}
 
-	    :global(a:link, a:active, a:visited) {
+	.wrapper>.header {
+		height: 35%;
+		background: #1835A5;
+	}
+
+	.wrapper>.main {
+		height: 55%;
+		background: #E8F1F2;
+		overflow: scroll;
+	}
+
+	.wrapper>.footer {
+		height: 10%;
+		background: #E8F1F2;
+	}
+
+	:global(a:link, a:active, a:visited) {
 		color: rgb(196, 248, 255);
 	}
 
 	:global(a:hover) {
 		color: rgb(196, 212, 255);
-	}
-
-	:global(body) {
-		background-color: rgb(26, 26, 26);
-		color: bisque;
 	}
 </style>
 
@@ -47,10 +56,15 @@
 {#if $selectedState}
 	 <StateInfo/><button on:click={resetState}>back</button>
 {:else}
-	<div class="flex-container">
+	<div class="wrapper">
+		<div class="header">
 		{#if supportsGeolocation()}
 		<StateLocator/>
 		{/if}
-		<StateList/>
+		</div>
+		<div class="main">
+			<StateList/>
+		</div>
+		<div class="footer">test</div>
 	</div>
 {/if}
