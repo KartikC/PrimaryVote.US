@@ -397,5 +397,75 @@
       "person": "2020-02-03",
       "mail": "2020-02-03"
     }
+  },
+  "UT": {
+    "name": "Utah",
+    "code": "UT",
+    "dates": {
+      "person": "2020-03-03",
+      "online": "2020-02-25",
+      "mail": "2020-02-02"
+    }
+  },
+  "VA": {
+    "name": "Virginia",
+    "code": "VA",
+    "dates": {
+      "person": "2020-02-10",
+      "online": "2020-02-10",
+      "mail": "2020-02-10"
+    }
+  },
+  "VI": {
+    "name": "Virgin Islands",
+    "code": "VI",
+    "dates": {
+      "person": "2020-05-07",
+      "mail": "2020-05-07"
+    }
+  },
+  "VT": {
+    "name": "Vermont",
+    "code": "VT",
+    "dates": {
+      "person": "2020-03-03",
+      "online": "2020-03-03",
+      "mail": "2020-03-03"
+    }
+  },
+  "WA": {
+    "name": "Washington",
+    "code": "WA",
+    "dates": {
+      "person": "2020-03-10",
+      "online": "2020-03-02",
+      "mail": "2020-03-02"
+    }
+  },
+  "WI": {
+    "name": "Wisconsin",
+    "code": "WI",
+    "dates": {
+      "person": "2020-04-07",
+      "online": "2020-03-18",
+      "mail": "2020-03-18"
+    }
+  },
+  "WV": {
+    "name": "West Virginia",
+    "code": "WV",
+    "dates": {
+      "person": "2020-04-21",
+      "online": "2020-04-21",
+      "mail": "2020-04-21"
+    }
+  },
+  "WY": {
+    "name": "Wyoming",
+    "code": "WY",
+    "dates": {
+      "person": "2020-04-04",
+      "mail": "2020-03-20"
+    }
   }
 }
