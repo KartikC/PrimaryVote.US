@@ -1,14 +1,9 @@
 <script>
 	import StateList from './StateList.svelte'
 	import StateInfo from './StateInfo.svelte'
-	import StateLocator from './StateLocator.svelte'
 	import {
 		selectedState
 	} from './stores.js';
-
-	function supportsGeolocation() {
-		return ((navigator.geolocation !== null) && (navigator.geolocation !== undefined));
-	}
 </script>
 
 <style>
@@ -27,6 +22,17 @@
 		background: #1835A5;
 		overflow: scroll;
 	}
+
+	.top {
+        position: absolute;
+        font-weight: bold;
+        font-size: 4vh;
+        color: #1835A5;
+        width: 80%;
+        height: 100%;
+        padding:0.25em 0 0 0.25em; 
+        text-align: left;
+    }
 
 	:global(html) {
 		font-size: 2vw;
@@ -66,9 +72,9 @@
 {:else}
 	<div class="wrapper">
 		<div class="header">
-		{#if supportsGeolocation()}
-		<StateLocator/>
-		{/if}
+			<div class="top">
+        		<span>How many days are left to register to vote in my primary?</span>
+    		</div>
 		</div>
 		<div class="main">
 			<StateList/>

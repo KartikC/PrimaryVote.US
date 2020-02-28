@@ -9,7 +9,12 @@
 
     let tempData = []
 
+    import StateLocator from './StateLocator.svelte'
     import StateBox from './StateBox.svelte';
+
+    function supportsGeolocation() {
+		return ((navigator.geolocation !== null) && (navigator.geolocation !== undefined));
+	}
 
     function getDaysUntil(date) {
         let daysUntil = Math.floor((date - new Date()) / (1000 * 60 * 60 * 24))
@@ -110,6 +115,9 @@
         <div class="left">STATE</div>
         <div class="right">DAYS LEFT</div>
     </div>
+    {#if supportsGeolocation()}
+		<StateLocator/>
+	{/if}
     {#each Object.entries(tempData) as state}
         <StateBox data={state[1]}/>
     {/each}

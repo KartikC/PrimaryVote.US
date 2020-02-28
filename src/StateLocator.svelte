@@ -11,7 +11,6 @@
     let stateLocs = [];
     let currentLocation = null;
     let loadingLocation = false;
-    let loadingDenied = false;
     let src = 'temp-loader.gif';
 
     onMount(async () => {
@@ -80,59 +79,52 @@
 </script>
 
 <style>
-    .container {
-        height: 100%;
+    .box {
         position: relative;
+        background-color: #1835A5;
+        margin-bottom: 1.5em;
+        display:inline-block;
+        width: 80%;
+        height: 8em;
+        border: 0.5em solid #1B98E0;
+        box-sizing: border-box;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.50);
     }
-
-    .top {
-        position: absolute;
+    .name {
         font-weight: bold;
-        font-size: 4vh;
-        color: #1835A5;
+        color: #1B98E0;
         width: 80%;
         height: 100%;
-        padding:0.25em 0 0 0.25em; 
+        font-size: 3em;
         text-align: left;
+        padding-left: 1em;
+        line-height: 230%;
+        float: left;
     }
-
-    .locate {
-        position: absolute;
-        font-size: 2vh;
-        height: 40%;
-        right: 0.75em;
-        bottom: 0;
-        margin-bottom: 0.25em;
+    .number {
+        font-weight: bold;
+        width: 20%;
+        top: 30%;
+        height: 100%;
+        font-size: 3em;
         text-align: right;
+        padding-right: 1em;
+        line-height: 260%;
+        float: right;
     }
 
     img {
-        height: 2em;
-    }
-
-    .icon {
-        width: 100%;
-    }
-
-    .locate-text {
-        width: 100%;
-        font-weight: bold;
-        color: #1B98E0;
-        font-size: 1.5em;
+        height: 1em;
     }
 </style>
 
-<div class="container">
-    <div class="top">
-        <span>How many days are left to register to vote in my primary?</span>
-    </div>
-    <div class="locate" on:click={locatePressed}>
-    {#if !loadingDenied}
-        <div class = "icon"><img src={'nav-icon.svg'} alt="nav-icon"/></div>
-        <div class = "locate-text"><span>LOCATE ME</span></div>
+
+<div class="box" on:click={locatePressed}>
+    <div class = "name">
+        <span>LOCATE ME</span>
         {#if loadingLocation}
             <img {src} alt="loading...">
         {/if}
-    {/if}
     </div>
+    <div class = "number"><img src={'nav-icon.svg'} alt="nav-icon"/></div>
 </div>
