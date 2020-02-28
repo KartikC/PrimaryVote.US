@@ -1683,7 +1683,7 @@ var app = (function () {
     			div1 = element("div");
     			div0 = element("div");
     			span = element("span");
-    			span.textContent = "HOW MANY DAYS LEFT TO REGISTER TO VOTE IN MY PRIMARY?";
+    			span.textContent = "HOW MANY DAYS ARE LEFT TO REGISTER TO VOTE IN MY PRIMARY?";
     			t1 = space();
     			div2 = element("div");
     			create_component(statelist.$$.fragment);
@@ -1693,7 +1693,7 @@ var app = (function () {
     			attr_dev(div1, "class", "header svelte-g4ai3d");
     			add_location(div1, file$5, 77, 2, 1303);
     			attr_dev(div2, "class", "main svelte-g4ai3d");
-    			add_location(div2, file$5, 82, 2, 1446);
+    			add_location(div2, file$5, 82, 2, 1450);
     			attr_dev(div3, "class", "wrapper svelte-g4ai3d");
     			add_location(div3, file$5, 76, 1, 1279);
     		},
