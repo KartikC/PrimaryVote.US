@@ -17,13 +17,14 @@
         position: relative;
         background-color: #1835A5;
         margin-bottom: 1.5em;
-        display:inline-block;
+        display: inline-block;
         width: 80%;
         height: 8em;
         border: 0.5em solid #E8F1F2;
         box-sizing: border-box;
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.50);
     }
+
     .name {
         font-weight: bold;
         color: #E8F1F2;
@@ -35,6 +36,7 @@
         line-height: 230%;
         float: left;
     }
+
     .number {
         font-weight: bold;
         width: 20%;
@@ -46,11 +48,17 @@
         line-height: 230%;
         float: right;
     }
+
+    .check {
+        color: #E8F1F2;
+    }
 </style>
 
 <div on:click={handleClick(data)} class="box">
     <div class="name">{data.name.toUpperCase()}</div>
     {#if data.bestOption}
-         <div class="number"><Countdown data={data.bestOption}/></div>
+        <div class="number"><Countdown data={data.bestOption}/></div>
+    {:else}
+        <div class="number check">✔</div>
     {/if}
 </div>
