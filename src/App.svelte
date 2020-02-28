@@ -7,6 +7,27 @@
 </script>
 
 <style>
+	@font-face {
+		font-family: 'SFProDisplay';
+		src: url('SFProDisplay-Regular.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: 'SFProDisplay';
+		src: url('SFProDisplay-Semibold.woff') format('woff');
+		font-weight: 600;
+		font-style: normal;
+	}
+
+	@font-face {
+		font-family: 'SFProDisplay';
+		src: url('SFProDisplay-Bold.woff') format('woff');
+		font-weight: bold;
+		font-style: normal;
+	}
+
 	.wrapper {
 		width: 100%;
 		height: 100%;
@@ -24,15 +45,16 @@
 	}
 
 	.top {
-        position: relative;
-        font-weight: bold;
-        font-size: 4vh;
-        color: #1835A5;
-        width: 80%;
-        height: 100%;
-        padding:0.25em 0 0 0.25em; 
-        text-align: left;
-    }
+		position: relative;
+		font-family: 'SFProDisplay';
+		font-weight: bold;
+		font-size: 3.75vh;
+		color: #1835A5;
+		width: 80%;
+		height: 100%;
+		padding: 0.25em 0 0 0.25em;
+		text-align: left;
+	}
 
 	:global(html) {
 		font-size: 2vw;
@@ -75,7 +97,7 @@
 	<div class="wrapper">
 		<div class="header">
 			<div class="top">
-        		<span>How many days are left to register to vote in my primary?</span>
+        		<span>HOW MANY DAYS LEFT TO REGISTER TO VOTE IN MY PRIMARY?</span>
     		</div>
 		</div>
 		<div class="main">
