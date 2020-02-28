@@ -75,7 +75,7 @@
 
     .titles {
         position: relative;
-        margin-top: 1em;
+        margin-top: 0.75em;
         margin-bottom: 0.5em;
         width: 80%;
         display:inline-block;
@@ -111,13 +111,13 @@
     }
 </style>
 <div class="wrapper">
+    {#if supportsGeolocation()}
+		<StateLocator/>
+	{/if}
     <div class="titles">
         <div class="left">STATE</div>
         <div class="right">DAYS LEFT</div>
     </div>
-    {#if supportsGeolocation()}
-		<StateLocator/>
-	{/if}
     {#each Object.entries(tempData) as state}
         <StateBox data={state[1]}/>
     {/each}
