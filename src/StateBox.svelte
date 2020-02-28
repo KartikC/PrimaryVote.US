@@ -26,6 +26,7 @@
     }
     .name {
         position: absolute;
+        font-weight: bold;
         color: #E8F1F2;
         left: 5%;
         top: 30%;
@@ -33,6 +34,7 @@
     }
     .number {
         position: absolute;
+        font-weight: bold;
         right: 5%;
         top: 30%;
         font-size: 1.5em;

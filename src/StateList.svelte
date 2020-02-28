@@ -65,12 +65,11 @@
 <style>
     .wrapper {
         text-align: center;
-        width: 480px;
     }
 
     .titles {
         position: relative;
-        margin: 10px;
+        margin-top: 10px;
         width: 321px;
         display:inline-block;
         font-weight: bold;
@@ -78,6 +77,14 @@
         text-align: left;
         font-size: 1em;
         box-sizing: border-box;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
     }
 
     .about {
@@ -99,7 +106,7 @@
 <div class="wrapper">
     <div class="titles">
         <div class="left">STATE</div>
-        <div class="left">DAYS</div>
+        <div class="right">DAYS LEFT</div>
     </div>
     {#each Object.entries(tempData) as state}
         <StateBox data={state[1]}/>
