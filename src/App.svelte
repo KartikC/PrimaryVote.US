@@ -37,6 +37,7 @@
 	:global(html) {
 		font-size: 2vw;
 		box-sizing: border-box;
+		overflow: hidden;
 	}
 
 	:global(*, *:before, *:after) {
@@ -48,6 +49,7 @@
 		margin: 0;
 		padding: 0;
 		font-weight: normal;
+		overflow: hidden;
 	}
 
 	:global(ol, ul) {
