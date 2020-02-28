@@ -31,21 +31,33 @@
             return null
     }
 
+    function compareBestOptions(a, b) {
+        var a_ = a.bestOption;
+        var b_ = b.bestOption;
+        if (!a_ && !b_) return 1;
+        if (!a_ && b_) return 1;
+        if (!b_ && a_) return -1;
+        if (a_[0] > b_[0]) return 1;
+        if (b_[0] > a_[0]) return -1;
+
+        return 0;
+    }
+
     onMount(async () => {
         const res = await fetch(`state-data.json`);
         tempData = await res.json();
 
-        for (const property in tempData) {
-            var curState = tempData[property];
-            var personDate = new Date(curState.dates.person);
+        tempData.forEach(element => {
+            var personDate = new Date(element.dates.person);
             var onlineDate = null;
-            if (curState.dates.online) {
-                onlineDate = new Date(curState.dates.online);
+            if (element.dates.online) {
+                onlineDate = new Date(element.dates.online);
             }
-            var mailDate = new Date(curState.dates.mail);
+            var mailDate = new Date(element.dates.mail);
 
-            curState['bestOption'] = bestOption(onlineDate, mailDate, personDate);
-        }
+            element['bestOption'] = bestOption(onlineDate, mailDate, personDate);
+        });
+        tempData.sort(compareBestOptions);
         stateData.set(tempData);
     });
 </script>

@@ -1,5 +1,4 @@
-{
-  "AK": {
+[{
     "name": "Alaska",
     "code": "AK",
     "dates": {
@@ -8,7 +7,7 @@
       "mail": "2020-03-05"
     }
   },
-  "AL": {
+  {
     "name": "Alabama",
     "code": "AL",
     "dates": {
@@ -17,7 +16,7 @@
       "mail": "2020-02-17"
     }
   },
-  "AR": {
+  {
     "name": "Arkansas",
     "code": "AR",
     "dates": {
@@ -25,7 +24,7 @@
       "mail": "2020-02-04"
     }
   },
-  "AZ": {
+  {
     "name": "Arizona",
     "code": "AZ",
     "dates": {
@@ -33,7 +32,7 @@
       "mail": "2020-02-03"
     }
   },
-  "CA": {
+  {
     "name": "California",
     "code": "CA",
     "dates": {
@@ -42,7 +41,7 @@
       "mail": "2020-02-17"
     }
   },
-  "CO": {
+  {
     "name": "Colorado",
     "code": "CO",
     "dates": {
@@ -51,7 +50,7 @@
       "mail": "2020-02-24"
     }
   },
-  "CT": {
+  {
     "name": "Connecticut",
     "code": "CT",
     "dates": {
@@ -60,7 +59,7 @@
       "mail": "2020-04-23"
     }
   },
-  "DC": {
+  {
     "name": "DC",
     "code": "DC",
     "dates": {
@@ -69,7 +68,7 @@
       "mail": "2020-05-12"
     }
   },
-  "DE": {
+  {
     "name": "Delaware",
     "code": "DE",
     "dates": {
@@ -78,7 +77,7 @@
       "mail": "2020-04-04"
     }
   },
-  "FL": {
+  {
     "name": "Florida",
     "code": "FL",
     "dates": {
@@ -87,7 +86,7 @@
       "mail": "2020-02-18"
     }
   },
-  "GA": {
+  {
     "name": "Georgia",
     "code": "GA",
     "dates": {
@@ -96,7 +95,7 @@
       "mail": "2020-02-24"
     }
   },
-  "GU": {
+  {
     "name": "Guam",
     "code": "GU",
     "dates": {
@@ -104,7 +103,7 @@
       "mail": "2020-04-22"
     }
   },
-  "HI": {
+  {
     "name": "Hawaii",
     "code": "HI",
     "dates": {
@@ -113,7 +112,7 @@
       "mail": "2020-03-05"
     }
   },
-  "IA": {
+  {
     "name": "Iowa",
     "code": "IA",
     "dates": {
@@ -122,7 +121,7 @@
       "mail": "2020-01-19"
     }
   },
-  "ID": {
+  {
     "name": "Idaho",
     "code": "ID",
     "dates": {
@@ -131,7 +130,7 @@
       "mail": "2020-02-14"
     }
   },
-  "IL": {
+  {
     "name": "Illinois",
     "code": "IL",
     "dates": {
@@ -140,7 +139,7 @@
       "mail": "2020-02-18"
     }
   },
-  "IN": {
+  {
     "name": "Indiana",
     "code": "IN",
     "dates": {
@@ -149,7 +148,7 @@
       "mail": "2020-04-06"
     }
   },
-  "KS": {
+  {
     "name": "Kansas",
     "code": "KS",
     "dates": {
@@ -158,7 +157,7 @@
       "mail": "2020-04-25"
     }
   },
-  "KY": {
+  {
     "name": "Kentucky",
     "code": "KY",
     "dates": {
@@ -167,7 +166,7 @@
       "mail": "2020-04-20"
     }
   },
-  "MA": {
+  {
     "name": "Massachusetts",
     "code": "MA",
     "dates": {
@@ -176,7 +175,7 @@
       "mail": "2020-02-12"
     }
   },
-  "MD": {
+  {
     "name": "Maryland",
     "code": "MD",
     "dates": {
@@ -185,7 +184,7 @@
       "mail": "2020-04-07"
     }
   },
-  "ME": {
+  {
     "name": "Maine",
     "code": "ME",
     "dates": {
@@ -193,7 +192,7 @@
       "mail": "2020-02-10"
     }
   },
-  "MI": {
+  {
     "name": "Michigan",
     "code": "MI",
     "dates": {
@@ -202,7 +201,7 @@
       "mail": "2020-02-24"
     }
   },
-  "MN": {
+  {
     "name": "Minnesota",
     "code": "MN",
     "dates": {
@@ -211,7 +210,7 @@
       "mail": "2020-02-11"
     }
   },
-  "MO": {
+  {
     "name": "Missouri",
     "code": "MO",
     "dates": {
@@ -220,7 +219,7 @@
       "mail": "2020-02-12"
     }
   },
-  "MP": {
+  {
     "name": "Northern Mariana",
     "code": "MP",
     "dates": {
@@ -228,7 +227,7 @@
       "mail": "2020-01-14"
     }
   },
-  "MS": {
+  {
     "name": "Mississippi",
     "code": "MS",
     "dates": {
@@ -236,7 +235,7 @@
       "mail": "2020-02-10"
     }
   },
-  "MT": {
+  {
     "name": "Montana",
     "code": "MT",
     "dates": {
@@ -244,7 +243,7 @@
       "mail": "2020-05-04"
     }
   },
-  "NC": {
+  {
     "name": "North Carolina",
     "code": "NC",
     "dates": {
@@ -252,7 +251,7 @@
       "mail": "2020-02-07"
     }
   },
-  "ND": {
+  {
     "name": "North Dakota",
     "code": "ND",
     "dates": {
@@ -260,7 +259,7 @@
       "mail": "2020-02-10"
     }
   },
-  "NE": {
+  {
     "name": "Nebraska",
     "code": "NE",
     "dates": {
@@ -269,7 +268,7 @@
       "mail": "2020-04-24"
     }
   },
-  "NH": {
+  {
     "name": "New Hampshire",
     "code": "NH",
     "dates": {
@@ -277,7 +276,7 @@
       "mail": "2020-02-04"
     }
   },
-  "NJ": {
+  {
     "name": "New Jersey",
     "code": "NJ",
     "dates": {
@@ -285,7 +284,7 @@
       "mail": "2020-05-12"
     }
   },
-  "NM": {
+  {
     "name": "New Mexico",
     "code": "NM",
     "dates": {
@@ -294,7 +293,7 @@
       "mail": "2020-05-05"
     }
   },
-  "NV": {
+  {
     "name": "Nevada",
     "code": "NV",
     "dates": {
@@ -303,7 +302,7 @@
       "mail": "2020-01-29"
     }
   },
-  "NY": {
+  {
     "name": "New York",
     "code": "NY",
     "dates": {
@@ -312,7 +311,7 @@
       "mail": "2020-04-03"
     }
   },
-  "OH": {
+  {
     "name": "Ohio",
     "code": "OH",
     "dates": {
@@ -321,7 +320,7 @@
       "mail": "2020-02-17"
     }
   },
-  "OK": {
+  {
     "name": "Oklahoma",
     "code": "OK",
     "dates": {
@@ -329,7 +328,7 @@
       "mail": "2020-02-07"
     }
   },
-  "OR": {
+  {
     "name": "Oregon",
     "code": "OR",
     "dates": {
@@ -338,7 +337,7 @@
       "mail": "2020-04-28"
     }
   },
-  "PA": {
+  {
     "name": "Pennsylvania",
     "code": "PA",
     "dates": {
@@ -347,7 +346,7 @@
       "mail": "2020-03-30"
     }
   },
-  "PR": {
+  {
     "name": "Puerto Rico",
     "code": "PR",
     "dates": {
@@ -355,7 +354,7 @@
       "mail": "2020-02-08"
     }
   },
-  "RI": {
+  {
     "name": "Rhode Island",
     "code": "RI",
     "dates": {
@@ -364,7 +363,7 @@
       "mail": "2020-03-29"
     }
   },
-  "SC": {
+  {
     "name": "South Carolina",
     "code": "SC",
     "dates": {
@@ -373,7 +372,7 @@
       "mail": "2020-01-30"
     }
   },
-  "SD": {
+  {
     "name": "South Dakota",
     "code": "SD",
     "dates": {
@@ -381,7 +380,7 @@
       "mail": "2020-05-18"
     }
   },
-  "TN": {
+  {
     "name": "Tennessee",
     "code": "TN",
     "dates": {
@@ -390,7 +389,7 @@
       "mail": "2020-02-03"
     }
   },
-  "TX": {
+  {
     "name": "Texas",
     "code": "TX",
     "dates": {
@@ -398,7 +397,7 @@
       "mail": "2020-02-03"
     }
   },
-  "UT": {
+  {
     "name": "Utah",
     "code": "UT",
     "dates": {
@@ -407,7 +406,7 @@
       "mail": "2020-02-02"
     }
   },
-  "VA": {
+  {
     "name": "Virginia",
     "code": "VA",
     "dates": {
@@ -416,7 +415,7 @@
       "mail": "2020-02-10"
     }
   },
-  "VI": {
+  {
     "name": "Virgin Islands",
     "code": "VI",
     "dates": {
@@ -424,7 +423,7 @@
       "mail": "2020-05-07"
     }
   },
-  "VT": {
+  {
     "name": "Vermont",
     "code": "VT",
     "dates": {
@@ -433,7 +432,7 @@
       "mail": "2020-03-03"
     }
   },
-  "WA": {
+  {
     "name": "Washington",
     "code": "WA",
     "dates": {
@@ -442,7 +441,7 @@
       "mail": "2020-03-02"
     }
   },
-  "WI": {
+  {
     "name": "Wisconsin",
     "code": "WI",
     "dates": {
@@ -451,7 +450,7 @@
       "mail": "2020-03-18"
     }
   },
-  "WV": {
+  {
     "name": "West Virginia",
     "code": "WV",
     "dates": {
@@ -460,7 +459,7 @@
       "mail": "2020-04-21"
     }
   },
-  "WY": {
+  {
     "name": "Wyoming",
     "code": "WY",
     "dates": {
@@ -468,4 +467,4 @@
       "mail": "2020-03-20"
     }
   }
-}
+]

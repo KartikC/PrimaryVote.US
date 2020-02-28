@@ -60,7 +60,7 @@
         currentLocation["lat"] = pos.coords.latitude;
         currentLocation["lon"] = pos.coords.longitude;
         loadingLocation = false;
-        selectedState.set($stateData[getState()["code"]]);
+        selectedState.set($stateData.find( element => element.code ==  getState()["code"]));
     }
 
     function error(err) {

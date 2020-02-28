@@ -37,12 +37,28 @@
 		background: #1835A5;
 	}
 
-	:global(a:link, a:active, a:visited) {
-		color: rgb(196, 248, 255);
+	:global(html) {
+		box-sizing: border-box;
+		font-size: 16px;
 	}
 
-	:global(a:hover) {
-		color: rgb(196, 212, 255);
+	:global(*, *:before, *:after) {
+		box-sizing: inherit;
+	}
+
+	:global(body, h1, h2, h3, h4, h5, h6, p, ol, ul) {
+		margin: 0;
+		padding: 0;
+		font-weight: normal;
+	}
+
+	:global(ol, ul) {
+		list-style: none;
+	}
+
+	:global(img) {
+		max-width: 100%;
+		height: auto;
 	}
 </style>
 
