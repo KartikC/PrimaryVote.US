@@ -2088,6 +2088,9 @@ var app = (function () {
 
     function create_fragment$5(ctx) {
     	let span;
+    	let t0;
+    	let br;
+    	let t1;
     	let span_intro;
     	let span_outro;
     	let current;
@@ -2095,15 +2098,21 @@ var app = (function () {
     	const block = {
     		c: function create() {
     			span = element("span");
-    			span.textContent = "YOUR WINDOW IS TOO WIDE 😅";
-    			attr_dev(span, "class", "text svelte-o6gela");
-    			add_location(span, file$5, 21, 0, 362);
+    			t0 = text("YOUR BROWSER WINDOW IS TOO WIDE");
+    			br = element("br");
+    			t1 = text("MAKE IT SMALLER TO CONTINUE 😅");
+    			add_location(br, file$5, 22, 35, 493);
+    			attr_dev(span, "class", "text svelte-18p3gnb");
+    			add_location(span, file$5, 21, 0, 360);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
+    			append_dev(span, t0);
+    			append_dev(span, br);
+    			append_dev(span, t1);
     			current = true;
     		},
     		p: noop,
