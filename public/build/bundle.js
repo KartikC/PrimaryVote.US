@@ -865,11 +865,11 @@ var app = (function () {
     			a = element("a");
     			a.textContent = "@KARTIKHELPS";
     			br4 = element("br");
-    			attr_dev(div0, "class", "left svelte-yj3j7c");
+    			attr_dev(div0, "class", "left svelte-1o4u2uh");
     			add_location(div0, file$2, 107, 8, 2509);
-    			attr_dev(div1, "class", "right svelte-yj3j7c");
+    			attr_dev(div1, "class", "right svelte-1o4u2uh");
     			add_location(div1, file$2, 108, 8, 2547);
-    			attr_dev(div2, "class", "titles svelte-yj3j7c");
+    			attr_dev(div2, "class", "titles svelte-1o4u2uh");
     			add_location(div2, file$2, 106, 4, 2480);
     			add_location(br0, file$2, 114, 56, 2767);
     			add_location(br1, file$2, 114, 61, 2772);
@@ -877,12 +877,12 @@ var app = (function () {
     			add_location(br3, file$2, 115, 55, 2833);
     			attr_dev(a, "href", "https://twitter.com/kartikhelps");
     			attr_dev(a, "target", "_blank");
-    			attr_dev(a, "class", "svelte-yj3j7c");
+    			attr_dev(a, "class", "svelte-1o4u2uh");
     			add_location(a, file$2, 116, 16, 2855);
     			add_location(br4, file$2, 116, 90, 2929);
-    			attr_dev(div3, "class", "about svelte-yj3j7c");
+    			attr_dev(div3, "class", "about svelte-1o4u2uh");
     			add_location(div3, file$2, 113, 4, 2691);
-    			attr_dev(div4, "class", "wrapper svelte-yj3j7c");
+    			attr_dev(div4, "class", "wrapper svelte-1o4u2uh");
     			add_location(div4, file$2, 105, 0, 2454);
     		},
     		l: function claim(nodes) {

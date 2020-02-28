@@ -73,7 +73,7 @@
         width: 321px;
         display:inline-block;
         font-weight: bold;
-        color: #E8F1F2;
+        color: #8F9491;
         text-align: left;
         font-size: 1em;
         box-sizing: border-box;
