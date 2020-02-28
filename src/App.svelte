@@ -7,27 +7,6 @@
 </script>
 
 <style>
-	@font-face {
-		font-family: 'SFProDisplay';
-		src: local("SFProDisplay-Regular.woff"), url('SFProDisplay-Regular.woff') format('woff');
-		font-weight: normal;
-		font-style: normal;
-	}
-
-	@font-face {
-		font-family: 'SFProDisplay';
-		src: local("SFProDisplay-Regular.woff"), url('SFProDisplay-Semibold.woff') format('woff');
-		font-weight: 600;
-		font-style: normal;
-	}
-
-	@font-face {
-		font-family: 'SFProDisplay';
-		src: local("SFProDisplay-Regular.woff"), url('SFProDisplay-Bold.woff') format('woff');
-		font-weight: bold;
-		font-style: normal;
-	}
-
 	.wrapper {
 		
 		width: 100%;
@@ -54,10 +33,6 @@
 		height: 100%;
 		padding: 0.25em 0 0 0.25em;
 		text-align: left;
-	}
-
-	:global(body) {
-		font-family: 'SFProDisplay', sans-serif;
 	}
 
 	:global(html) {
