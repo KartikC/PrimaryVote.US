@@ -110,16 +110,20 @@
             <div class="info">
                 YOU HAVE <Countdown data={bestOptionResult} /> DAYS LEFT TO REGISTER {bestOptionResult[1].toUpperCase()}
             </div>
-            <div onclick="window.open('{baseURL+selectedState_value.code}','_blank');" class="box">
-                REGISTER NOW
+        {:else}
+            <div class="info">
+                IT MAY BE TOO LATE TO REGISTER BUT YOU CAN STILL CHECK
             </div>
+        {/if}
+        <div onclick="window.open('{baseURL+selectedState_value.code}','_blank');" class="box">
+            REGISTER NOW
+        </div>
+        {#if bestOptionResult}
             {#if bestOptionResult[0] > 7}
-                <div class="remind">
+                <div onclick="window.open('{remindURL}','_blank');" class="remind">
                     REMIND ME LATER
                 </div>
             {/if}
-        {:else}
-            it may be too late to register but you can double check <a href="{baseURL+selectedState_value.code}" target="_blank">here.</a>
         {/if}
     </div>
     <div class = "footer">

@@ -2,9 +2,12 @@
 	import StateList from './StateList.svelte'
 	import StateInfo from './StateInfo.svelte'
 	import StateLocator from './StateLocator.svelte'
+	import AboutModal from './AboutModal.svelte'
 	import {
 		selectedState
 	} from './stores.js';
+
+	let showModal = false;
 
 	function supportsGeolocation() {
 		return ((navigator.geolocation !== null) && (navigator.geolocation !== undefined));
@@ -38,6 +41,13 @@
         color: #BCABAE;
         text-align: center;
         font-size: 1.5em;
+	}
+	
+	.about-modal {
+        text-align: left;
+        color: #E8F1F2;
+        font-size: 1.5em;
+        font-weight: bold;
     }
 
 	:global(html) {
@@ -86,9 +96,20 @@
 			<StateList/>
 		</div>
 		<div class="footer">
-		    <div class="about">
+		    <div on:click="{() => showModal = true}" class="about">
             	ABOUT
         	</div>
 		</div>
 	</div>
+	{#if showModal}
+	<AboutModal on:close="{() => showModal = false}">
+		<div class="about-modal">
+			<ol class="definition-list">
+				<li>PRIMARYVOTE.US DOESN'T STORE ANY DATA ABOUT YOU</li>
+				<li>IT DOESN’T EVEN USE GOOGLE FOR GEOLOCATION</li>
+				<li>MADE BY<a href="https://twitter.com/kartikhelps">@KARTIKHELPS</a></li>
+			</ol>
+		</div>
+	</AboutModal>
+{/if}
 {/if}
