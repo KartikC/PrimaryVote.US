@@ -1415,12 +1415,12 @@ var app = (function () {
     			if (img.src !== (img_src_value = "nav-icon.svg")) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "nav-icon");
     			attr_dev(img, "class", "svelte-13t667i");
-    			add_location(img, file$4, 130, 28, 3258);
+    			add_location(img, file$4, 130, 28, 3274);
     			attr_dev(div0, "class", "icon svelte-13t667i");
-    			add_location(div0, file$4, 130, 8, 3238);
-    			add_location(span, file$4, 131, 35, 3342);
+    			add_location(div0, file$4, 130, 8, 3254);
+    			add_location(span, file$4, 131, 35, 3358);
     			attr_dev(div1, "class", "locate-text svelte-13t667i");
-    			add_location(div1, file$4, 131, 8, 3315);
+    			add_location(div1, file$4, 131, 8, 3331);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -1478,7 +1478,7 @@ var app = (function () {
     			if (img.src !== (img_src_value = /*src*/ ctx[2])) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "loading...");
     			attr_dev(img, "class", "svelte-13t667i");
-    			add_location(img, file$4, 133, 12, 3413);
+    			add_location(img, file$4, 133, 12, 3429);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, img, anchor);
@@ -1514,7 +1514,7 @@ var app = (function () {
     			div2 = element("div");
     			div0 = element("div");
     			span = element("span");
-    			span.textContent = "HOW MANY DAYS DO I HAVE LEFT TO REGISTER?";
+    			span.textContent = "How many days are left to register to vote in my primary?";
     			t1 = space();
     			div1 = element("div");
     			if (if_block) if_block.c();
@@ -1522,7 +1522,7 @@ var app = (function () {
     			attr_dev(div0, "class", "top svelte-13t667i");
     			add_location(div0, file$4, 125, 4, 3063);
     			attr_dev(div1, "class", "locate svelte-13t667i");
-    			add_location(div1, file$4, 128, 4, 3159);
+    			add_location(div1, file$4, 128, 4, 3175);
     			attr_dev(div2, "class", "container svelte-13t667i");
     			add_location(div2, file$4, 124, 0, 3035);
     		},

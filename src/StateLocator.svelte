@@ -124,7 +124,7 @@
 
 <div class="container">
     <div class="top">
-        <span>HOW MANY DAYS DO I HAVE LEFT TO REGISTER?</span>
+        <span>How many days are left to register to vote in my primary?</span>
     </div>
     <div class="locate" on:click={locatePressed}>
     {#if !loadingDenied}
