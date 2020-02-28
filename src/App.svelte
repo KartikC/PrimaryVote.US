@@ -6,10 +6,6 @@
 		selectedState
 	} from './stores.js';
 
-	function resetState() {
-		selectedState.set(null);
-	}
-
 	function supportsGeolocation() {
 		return ((navigator.geolocation !== null) && (navigator.geolocation !== undefined));
 	}
@@ -37,6 +33,13 @@
 		background: #1835A5;
 	}
 
+	.about {
+        font-weight: bold;
+        color: #BCABAE;
+        text-align: center;
+        font-size: 1.5em;
+    }
+
 	:global(html) {
 		box-sizing: border-box;
 		font-size: 16px;
@@ -47,6 +50,7 @@
 	}
 
 	:global(body, h1, h2, h3, h4, h5, h6, p, ol, ul) {
+		background: #1835A5;
 		margin: 0;
 		padding: 0;
 		font-weight: normal;
@@ -70,7 +74,7 @@
 
 
 {#if $selectedState}
-	 <StateInfo/><button on:click={resetState}>back</button>
+	 <StateInfo/>
 {:else}
 	<div class="wrapper">
 		<div class="header">
@@ -81,6 +85,10 @@
 		<div class="main">
 			<StateList/>
 		</div>
-		<div class="footer">test</div>
+		<div class="footer">
+		    <div class="about">
+            	ABOUT
+        	</div>
+		</div>
 	</div>
 {/if}

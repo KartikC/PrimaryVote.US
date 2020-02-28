@@ -80,18 +80,15 @@
 </script>
 
 <style>
-    .wrapper {
+    .container {
         padding: 5px;
         height: 100%;
         position: relative;
     }
 
-    .text {
+    .top {
         font-weight: bold;
         font-size: 2em;
-    }
-
-    .top {
         color: #1835A5;
         left: 10px;
         top: 10px;
@@ -122,9 +119,9 @@
     }
 </style>
 
-<div class="wrapper">
+<div class="container">
     <div class="top">
-        <span class="text">HOW MANY DAYS DO I HAVE LEFT TO REGISTER?</span>
+        <span>HOW MANY DAYS DO I HAVE LEFT TO REGISTER?</span>
     </div>
     <div class="locate" on:click={locatePressed}>
     {#if !loadingDenied}
