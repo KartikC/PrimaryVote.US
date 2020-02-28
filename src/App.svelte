@@ -1,14 +1,15 @@
 <script>
 	import StateList from './StateList.svelte'
 	import StateInfo from './StateInfo.svelte'
+	import TooWide from './TooWide.svelte'
 	import {
 		selectedState
 	} from './stores.js';
+	let w = 50;
 </script>
 
 <style>
 	.wrapper {
-
 		width: 100%;
 		height: 100%;
 	}
@@ -67,21 +68,24 @@
 <svelte:head>
 	<title>Can I Still Vote? - PrimaryVote.US</title>
 	<html lang="en" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 </svelte:head>
 
-
-{#if $selectedState}
-	 <StateInfo/>
+<div bind:clientWidth={w}></div>
+{#if w < 1100}
+	{#if $selectedState}
+		<StateInfo/>
+	{:else}
+		<div class="wrapper"> 
+			<div class="header">
+				<div class="top">
+					<span>HOW MANY DAYS ARE LEFT TO REGISTER TO VOTE IN MY PRIMARY?</span>
+				</div>
+			</div>
+			<div class="main">
+				<StateList/>
+			</div>
+		</div>
+	{/if}
 {:else}
-	<div class="wrapper">
-		<div class="header">
-			<div class="top">
-        		<span>HOW MANY DAYS ARE LEFT TO REGISTER TO VOTE IN MY PRIMARY?</span>
-    		</div>
-		</div>
-		<div class="main">
-			<StateList/>
-		</div>
-	</div>
+	<TooWide/>
 {/if}

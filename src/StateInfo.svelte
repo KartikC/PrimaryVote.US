@@ -105,7 +105,7 @@
         text-align: left;
         font-size: 3em;
         box-sizing: border-box;
-        margin-bottom: 4em;
+        margin-bottom: 3em;
     }
 
     .box {
