@@ -1687,15 +1687,15 @@ var app = (function () {
     			t1 = space();
     			div2 = element("div");
     			create_component(statelist.$$.fragment);
-    			add_location(span, file$5, 99, 10, 1696);
-    			attr_dev(div0, "class", "top svelte-10olpll");
-    			add_location(div0, file$5, 98, 3, 1668);
-    			attr_dev(div1, "class", "header svelte-10olpll");
-    			add_location(div1, file$5, 97, 2, 1644);
-    			attr_dev(div2, "class", "main svelte-10olpll");
-    			add_location(div2, file$5, 102, 2, 1787);
-    			attr_dev(div3, "class", "wrapper svelte-10olpll");
-    			add_location(div3, file$5, 96, 1, 1620);
+    			add_location(span, file$5, 99, 10, 1804);
+    			attr_dev(div0, "class", "top svelte-5simz0");
+    			add_location(div0, file$5, 98, 3, 1776);
+    			attr_dev(div1, "class", "header svelte-5simz0");
+    			add_location(div1, file$5, 97, 2, 1752);
+    			attr_dev(div2, "class", "main svelte-5simz0");
+    			add_location(div2, file$5, 102, 2, 1895);
+    			attr_dev(div3, "class", "wrapper svelte-5simz0");
+    			add_location(div3, file$5, 96, 1, 1728);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div3, anchor);
@@ -1799,10 +1799,10 @@ var app = (function () {
     			if_block_anchor = empty();
     			document.title = "Can I Still Vote? - PrimaryVote.US";
     			attr_dev(html, "lang", "en");
-    			add_location(html, file$5, 88, 1, 1469);
+    			add_location(html, file$5, 88, 1, 1577);
     			attr_dev(meta, "name", "viewport");
     			attr_dev(meta, "content", "width=device-width, initial-scale=1");
-    			add_location(meta, file$5, 89, 1, 1489);
+    			add_location(meta, file$5, 89, 1, 1597);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

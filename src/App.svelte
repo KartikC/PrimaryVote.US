@@ -9,21 +9,21 @@
 <style>
 	@font-face {
 		font-family: 'SFProDisplay';
-		src: url('SFProDisplay-Regular.woff') format('woff');
+		src: local("SFProDisplay-Regular.woff"), url('SFProDisplay-Regular.woff') format('woff');
 		font-weight: normal;
 		font-style: normal;
 	}
 
 	@font-face {
 		font-family: 'SFProDisplay';
-		src: url('SFProDisplay-Semibold.woff') format('woff');
+		src: local("SFProDisplay-Regular.woff"), url('SFProDisplay-Semibold.woff') format('woff');
 		font-weight: 600;
 		font-style: normal;
 	}
 
 	@font-face {
 		font-family: 'SFProDisplay';
-		src: url('SFProDisplay-Bold.woff') format('woff');
+		src: local("SFProDisplay-Regular.woff"), url('SFProDisplay-Bold.woff') format('woff');
 		font-weight: bold;
 		font-style: normal;
 	}
