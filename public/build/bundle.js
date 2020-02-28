@@ -1617,7 +1617,7 @@ var app = (function () {
     	} else if (getDaysUntil(mailDate)) {
     		return [getDaysUntil(mailDate), "by mail"];
     	} else if (getDaysUntil(personDate)) {
-    		return [getDaysUntil(personDate), "in perso;n"];
+    		return [getDaysUntil(personDate), "in person"];
     	} else return null;
     }
 
