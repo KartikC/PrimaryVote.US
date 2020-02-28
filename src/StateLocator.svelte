@@ -101,7 +101,8 @@
         font-size: 2vh;
         height: 40%;
         right: 0.75em;
-        bottom: -0.5em;
+        bottom: 0;
+        margin-bottom: 0.25em;
         text-align: right;
     }
 
