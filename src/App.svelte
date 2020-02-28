@@ -77,7 +77,7 @@
 	<div class="wrapper">
 		<div class="header">
 			<div class="top">
-        		<span>HOW MANY DAYS LEFT TO REGISTER TO VOTE IN MY PRIMARY?</span>
+        		<span>HOW MANY DAYS ARE LEFT TO REGISTER TO VOTE IN MY PRIMARY?</span>
     		</div>
 		</div>
 		<div class="main">
