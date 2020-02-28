@@ -57,7 +57,7 @@
 
             element['bestOption'] = bestOption(onlineDate, mailDate, personDate);
         });
-        tempData.sort(compareBestOptions);
+        //tempData.sort(compareBestOptions);
         stateData.set(tempData);
     });
 </script>
@@ -66,9 +66,46 @@
     .wrapper {
         text-align: center;
     }
+
+    .titles {
+        position: relative;
+        margin: 10px;
+        width: 321px;
+        display:inline-block;
+        font-weight: bold;
+        color: #E8F1F2;
+        text-align: left;
+        font-size: 1em;
+        box-sizing: border-box;
+    }
+
+    .about {
+        position: relative;
+        margin: 10px;
+        width: 321px;
+        display:inline-block;
+        font-weight: bold;
+        color: #8F9491;
+        text-align: left;
+        font-size: 1em;
+        box-sizing: border-box;
+    }
+
+    .about>a {
+        color: #8F9491;
+    }
 </style>
 <div class="wrapper">
+    <div class="titles">
+        <div class="left">STATE</div>
+        <div class="left">DAYS</div>
+    </div>
     {#each Object.entries(tempData) as state}
-    <StateBox data={state[1]}/>
-{/each}
+        <StateBox data={state[1]}/>
+    {/each}
+    <div class="about">
+        PRIMARYVOTE.US DOES NOT STORE ANY INFO ABOUT YOU<br/><br/>
+        IT DOESN'T EVEN USE GOOGLE FOR GEOLOCATION<br/><br/>
+        MADE BY <a href="https://twitter.com/kartikhelps" target="_blank">@KARTIKHELPS</a><br/>
+    </div>
 </div>

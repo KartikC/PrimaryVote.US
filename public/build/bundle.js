@@ -4,12 +4,6 @@ var app = (function () {
     'use strict';
 
     function noop() { }
-    function assign(tar, src) {
-        // @ts-ignore
-        for (const k in src)
-            tar[k] = src[k];
-        return tar;
-    }
     function add_location(element, file, line, column, char) {
         element.__svelte_meta = {
             loc: { file, line, column, char }
@@ -44,32 +38,6 @@ var app = (function () {
     }
     function component_subscribe(component, store, callback) {
         component.$$.on_destroy.push(subscribe(store, callback));
-    }
-    function create_slot(definition, ctx, $$scope, fn) {
-        if (definition) {
-            const slot_ctx = get_slot_context(definition, ctx, $$scope, fn);
-            return definition[0](slot_ctx);
-        }
-    }
-    function get_slot_context(definition, ctx, $$scope, fn) {
-        return definition[1] && fn
-            ? assign($$scope.ctx.slice(), definition[1](fn(ctx)))
-            : $$scope.ctx;
-    }
-    function get_slot_changes(definition, $$scope, dirty, fn) {
-        if (definition[2] && fn) {
-            const lets = definition[2](fn(dirty));
-            if (typeof $$scope.dirty === 'object') {
-                const merged = [];
-                const len = Math.max($$scope.dirty.length, lets.length);
-                for (let i = 0; i < len; i += 1) {
-                    merged[i] = $$scope.dirty[i] | lets[i];
-                }
-                return merged;
-            }
-            return $$scope.dirty | lets;
-        }
-        return $$scope.dirty;
     }
 
     function append(target, node) {
@@ -132,23 +100,6 @@ var app = (function () {
     }
     function onMount(fn) {
         get_current_component().$$.on_mount.push(fn);
-    }
-    function onDestroy(fn) {
-        get_current_component().$$.on_destroy.push(fn);
-    }
-    function createEventDispatcher() {
-        const component = get_current_component();
-        return (type, detail) => {
-            const callbacks = component.$$.callbacks[type];
-            if (callbacks) {
-                // TODO are there situations where events could be dispatched
-                // in a server (non-DOM) environment?
-                const event = custom_event(type, detail);
-                callbacks.slice().forEach(fn => {
-                    fn.call(component, event);
-                });
-            }
-        };
     }
 
     const dirty_components = [];
@@ -810,7 +761,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (71:4) {#each Object.entries(tempData) as state}
+    // (103:4) {#each Object.entries(tempData) as state}
     function create_each_block(ctx) {
     	let current;
 
@@ -850,7 +801,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(71:4) {#each Object.entries(tempData) as state}",
+    		source: "(103:4) {#each Object.entries(tempData) as state}",
     		ctx
     	});
 
@@ -858,7 +809,23 @@ var app = (function () {
     }
 
     function create_fragment$2(ctx) {
-    	let div;
+    	let div4;
+    	let div2;
+    	let div0;
+    	let t1;
+    	let div1;
+    	let t3;
+    	let t4;
+    	let div3;
+    	let t5;
+    	let br0;
+    	let br1;
+    	let t6;
+    	let br2;
+    	let br3;
+    	let t7;
+    	let a;
+    	let br4;
     	let current;
     	let each_value = Object.entries(/*tempData*/ ctx[0]);
     	let each_blocks = [];
@@ -873,25 +840,77 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div = element("div");
+    			div4 = element("div");
+    			div2 = element("div");
+    			div0 = element("div");
+    			div0.textContent = "STATE";
+    			t1 = space();
+    			div1 = element("div");
+    			div1.textContent = "DAYS";
+    			t3 = space();
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(div, "class", "wrapper svelte-31jwl3");
-    			add_location(div, file$2, 69, 0, 1809);
+    			t4 = space();
+    			div3 = element("div");
+    			t5 = text("PRIMARYVOTE.US DOES NOT STORE ANY INFO ABOUT YOU");
+    			br0 = element("br");
+    			br1 = element("br");
+    			t6 = text("\n        IT DOESN'T EVEN USE GOOGLE FOR GEOLOCATION");
+    			br2 = element("br");
+    			br3 = element("br");
+    			t7 = text("\n        MADE BY ");
+    			a = element("a");
+    			a.textContent = "@KARTIKHELPS";
+    			br4 = element("br");
+    			attr_dev(div0, "class", "left");
+    			add_location(div0, file$2, 99, 8, 2423);
+    			attr_dev(div1, "class", "left");
+    			add_location(div1, file$2, 100, 8, 2461);
+    			attr_dev(div2, "class", "titles svelte-1xe597k");
+    			add_location(div2, file$2, 98, 4, 2394);
+    			add_location(br0, file$2, 106, 56, 2675);
+    			add_location(br1, file$2, 106, 61, 2680);
+    			add_location(br2, file$2, 107, 50, 2736);
+    			add_location(br3, file$2, 107, 55, 2741);
+    			attr_dev(a, "href", "https://twitter.com/kartikhelps");
+    			attr_dev(a, "target", "_blank");
+    			attr_dev(a, "class", "svelte-1xe597k");
+    			add_location(a, file$2, 108, 16, 2763);
+    			add_location(br4, file$2, 108, 90, 2837);
+    			attr_dev(div3, "class", "about svelte-1xe597k");
+    			add_location(div3, file$2, 105, 4, 2599);
+    			attr_dev(div4, "class", "wrapper svelte-1xe597k");
+    			add_location(div4, file$2, 97, 0, 2368);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
+    			insert_dev(target, div4, anchor);
+    			append_dev(div4, div2);
+    			append_dev(div2, div0);
+    			append_dev(div2, t1);
+    			append_dev(div2, div1);
+    			append_dev(div4, t3);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
-    				each_blocks[i].m(div, null);
+    				each_blocks[i].m(div4, null);
     			}
 
+    			append_dev(div4, t4);
+    			append_dev(div4, div3);
+    			append_dev(div3, t5);
+    			append_dev(div3, br0);
+    			append_dev(div3, br1);
+    			append_dev(div3, t6);
+    			append_dev(div3, br2);
+    			append_dev(div3, br3);
+    			append_dev(div3, t7);
+    			append_dev(div3, a);
+    			append_dev(div3, br4);
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
@@ -909,7 +928,7 @@ var app = (function () {
     						each_blocks[i] = create_each_block(child_ctx);
     						each_blocks[i].c();
     						transition_in(each_blocks[i], 1);
-    						each_blocks[i].m(div, null);
+    						each_blocks[i].m(div4, t4);
     					}
     				}
 
@@ -941,7 +960,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(div4);
     			destroy_each(each_blocks, detaching);
     		}
     	};
@@ -977,17 +996,6 @@ var app = (function () {
     	} else return null;
     }
 
-    function compareBestOptions(a, b) {
-    	var a_ = a.bestOption;
-    	var b_ = b.bestOption;
-    	if (!a_ && !b_) return 1;
-    	if (!a_ && b_) return 1;
-    	if (!b_ && a_) return -1;
-    	if (a_[0] > b_[0]) return 1;
-    	if (b_[0] > a_[0]) return -1;
-    	return 0;
-    }
-
     function instance$2($$self, $$props, $$invalidate) {
     	let tempData = [];
 
@@ -1007,7 +1015,7 @@ var app = (function () {
     			element["bestOption"] = bestOption(onlineDate, mailDate, personDate);
     		});
 
-    		tempData.sort(compareBestOptions);
+    		//tempData.sort(compareBestOptions);
     		stateData.set(tempData);
     	});
 
@@ -1672,316 +1680,60 @@ var app = (function () {
     	}
     }
 
-    /* src/AboutModal.svelte generated by Svelte v3.18.2 */
-    const file$5 = "src/AboutModal.svelte";
-    const get_header_slot_changes = dirty => ({});
-    const get_header_slot_context = ctx => ({});
-
-    function create_fragment$5(ctx) {
-    	let div0;
-    	let t0;
-    	let div1;
-    	let t1;
-    	let hr0;
-    	let t2;
-    	let t3;
-    	let hr1;
-    	let t4;
-    	let button;
-    	let current;
-    	let dispose;
-    	const header_slot_template = /*$$slots*/ ctx[6].header;
-    	const header_slot = create_slot(header_slot_template, ctx, /*$$scope*/ ctx[5], get_header_slot_context);
-    	const default_slot_template = /*$$slots*/ ctx[6].default;
-    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[5], null);
-
-    	const block = {
-    		c: function create() {
-    			div0 = element("div");
-    			t0 = space();
-    			div1 = element("div");
-    			if (header_slot) header_slot.c();
-    			t1 = space();
-    			hr0 = element("hr");
-    			t2 = space();
-    			if (default_slot) default_slot.c();
-    			t3 = space();
-    			hr1 = element("hr");
-    			t4 = space();
-    			button = element("button");
-    			button.textContent = "close";
-    			attr_dev(div0, "class", "modal-background svelte-1rqs1nm");
-    			add_location(div0, file$5, 41, 0, 890);
-    			add_location(hr0, file$5, 45, 1, 1045);
-    			add_location(hr1, file$5, 47, 1, 1066);
-    			button.autofocus = true;
-    			attr_dev(button, "class", "svelte-1rqs1nm");
-    			add_location(button, file$5, 50, 1, 1112);
-    			attr_dev(div1, "class", "modal svelte-1rqs1nm");
-    			attr_dev(div1, "role", "dialog");
-    			attr_dev(div1, "aria-modal", "true");
-    			add_location(div1, file$5, 43, 0, 945);
-    		},
-    		l: function claim(nodes) {
-    			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, div0, anchor);
-    			insert_dev(target, t0, anchor);
-    			insert_dev(target, div1, anchor);
-
-    			if (header_slot) {
-    				header_slot.m(div1, null);
-    			}
-
-    			append_dev(div1, t1);
-    			append_dev(div1, hr0);
-    			append_dev(div1, t2);
-
-    			if (default_slot) {
-    				default_slot.m(div1, null);
-    			}
-
-    			append_dev(div1, t3);
-    			append_dev(div1, hr1);
-    			append_dev(div1, t4);
-    			append_dev(div1, button);
-    			/*div1_binding*/ ctx[7](div1);
-    			current = true;
-    			button.focus();
-
-    			dispose = [
-    				listen_dev(window, "keydown", /*handle_keydown*/ ctx[2], false, false, false),
-    				listen_dev(div0, "click", /*close*/ ctx[1], false, false, false),
-    				listen_dev(button, "click", /*close*/ ctx[1], false, false, false)
-    			];
-    		},
-    		p: function update(ctx, [dirty]) {
-    			if (header_slot && header_slot.p && dirty & /*$$scope*/ 32) {
-    				header_slot.p(get_slot_context(header_slot_template, ctx, /*$$scope*/ ctx[5], get_header_slot_context), get_slot_changes(header_slot_template, /*$$scope*/ ctx[5], dirty, get_header_slot_changes));
-    			}
-
-    			if (default_slot && default_slot.p && dirty & /*$$scope*/ 32) {
-    				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[5], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[5], dirty, null));
-    			}
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(header_slot, local);
-    			transition_in(default_slot, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(header_slot, local);
-    			transition_out(default_slot, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div0);
-    			if (detaching) detach_dev(t0);
-    			if (detaching) detach_dev(div1);
-    			if (header_slot) header_slot.d(detaching);
-    			if (default_slot) default_slot.d(detaching);
-    			/*div1_binding*/ ctx[7](null);
-    			run_all(dispose);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_fragment$5.name,
-    		type: "component",
-    		source: "",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    function instance$5($$self, $$props, $$invalidate) {
-    	const dispatch = createEventDispatcher();
-    	const close = () => dispatch("close");
-    	let modal;
-
-    	const handle_keydown = e => {
-    		if (e.key === "Escape") {
-    			close();
-    			return;
-    		}
-
-    		if (e.key === "Tab") {
-    			// trap focus
-    			const nodes = modal.querySelectorAll("*");
-
-    			const tabbable = Array.from(nodes).filter(n => n.tabIndex >= 0);
-    			let index = tabbable.indexOf(document.activeElement);
-    			if (index === -1 && e.shiftKey) index = 0;
-    			index += tabbable.length + (e.shiftKey ? -1 : 1);
-    			index %= tabbable.length;
-    			tabbable[index].focus();
-    			e.preventDefault();
-    		}
-    	};
-
-    	const previously_focused = typeof document !== "undefined" && document.activeElement;
-
-    	if (previously_focused) {
-    		onDestroy(() => {
-    			previously_focused.focus();
-    		});
-    	}
-
-    	let { $$slots = {}, $$scope } = $$props;
-
-    	function div1_binding($$value) {
-    		binding_callbacks[$$value ? "unshift" : "push"](() => {
-    			$$invalidate(0, modal = $$value);
-    		});
-    	}
-
-    	$$self.$set = $$props => {
-    		if ("$$scope" in $$props) $$invalidate(5, $$scope = $$props.$$scope);
-    	};
-
-    	$$self.$capture_state = () => {
-    		return {};
-    	};
-
-    	$$self.$inject_state = $$props => {
-    		if ("modal" in $$props) $$invalidate(0, modal = $$props.modal);
-    	};
-
-    	return [
-    		modal,
-    		close,
-    		handle_keydown,
-    		dispatch,
-    		previously_focused,
-    		$$scope,
-    		$$slots,
-    		div1_binding
-    	];
-    }
-
-    class AboutModal extends SvelteComponentDev {
-    	constructor(options) {
-    		super(options);
-    		init(this, options, instance$5, create_fragment$5, safe_not_equal, {});
-
-    		dispatch_dev("SvelteRegisterComponent", {
-    			component: this,
-    			tagName: "AboutModal",
-    			options,
-    			id: create_fragment$5.name
-    		});
-    	}
-    }
-
     /* src/App.svelte generated by Svelte v3.18.2 */
-    const file$6 = "src/App.svelte";
+    const file$5 = "src/App.svelte";
 
-    // (88:0) {:else}
+    // (66:0) {:else}
     function create_else_block$1(ctx) {
-    	let div4;
+    	let div2;
     	let div0;
     	let show_if = supportsGeolocation();
-    	let t0;
+    	let t;
     	let div1;
-    	let t1;
-    	let div3;
-    	let div2;
-    	let t3;
-    	let if_block1_anchor;
     	let current;
-    	let dispose;
-    	let if_block0 = show_if && create_if_block_2$1(ctx);
+    	let if_block = show_if && create_if_block_1$2(ctx);
     	const statelist = new StateList({ $$inline: true });
-    	let if_block1 = /*showModal*/ ctx[0] && create_if_block_1$2(ctx);
 
     	const block = {
     		c: function create() {
-    			div4 = element("div");
+    			div2 = element("div");
     			div0 = element("div");
-    			if (if_block0) if_block0.c();
-    			t0 = space();
+    			if (if_block) if_block.c();
+    			t = space();
     			div1 = element("div");
     			create_component(statelist.$$.fragment);
-    			t1 = space();
-    			div3 = element("div");
-    			div2 = element("div");
-    			div2.textContent = "ABOUT";
-    			t3 = space();
-    			if (if_block1) if_block1.c();
-    			if_block1_anchor = empty();
-    			attr_dev(div0, "class", "header svelte-lk1znx");
-    			add_location(div0, file$6, 89, 2, 1512);
-    			attr_dev(div1, "class", "main svelte-lk1znx");
-    			add_location(div1, file$6, 94, 2, 1600);
-    			attr_dev(div2, "class", "about svelte-lk1znx");
-    			add_location(div2, file$6, 98, 6, 1673);
-    			attr_dev(div3, "class", "footer svelte-lk1znx");
-    			add_location(div3, file$6, 97, 2, 1646);
-    			attr_dev(div4, "class", "wrapper svelte-lk1znx");
-    			add_location(div4, file$6, 88, 1, 1488);
+    			attr_dev(div0, "class", "header svelte-1fp7rk9");
+    			add_location(div0, file$5, 67, 2, 1131);
+    			attr_dev(div1, "class", "main svelte-1fp7rk9");
+    			add_location(div1, file$5, 72, 2, 1219);
+    			attr_dev(div2, "class", "wrapper svelte-1fp7rk9");
+    			add_location(div2, file$5, 66, 1, 1107);
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div4, anchor);
-    			append_dev(div4, div0);
-    			if (if_block0) if_block0.m(div0, null);
-    			append_dev(div4, t0);
-    			append_dev(div4, div1);
+    			insert_dev(target, div2, anchor);
+    			append_dev(div2, div0);
+    			if (if_block) if_block.m(div0, null);
+    			append_dev(div2, t);
+    			append_dev(div2, div1);
     			mount_component(statelist, div1, null);
-    			append_dev(div4, t1);
-    			append_dev(div4, div3);
-    			append_dev(div3, div2);
-    			insert_dev(target, t3, anchor);
-    			if (if_block1) if_block1.m(target, anchor);
-    			insert_dev(target, if_block1_anchor, anchor);
     			current = true;
-    			dispose = listen_dev(div2, "click", /*click_handler*/ ctx[2], false, false, false);
     		},
-    		p: function update(ctx, dirty) {
-    			if (/*showModal*/ ctx[0]) {
-    				if (if_block1) {
-    					if_block1.p(ctx, dirty);
-    					transition_in(if_block1, 1);
-    				} else {
-    					if_block1 = create_if_block_1$2(ctx);
-    					if_block1.c();
-    					transition_in(if_block1, 1);
-    					if_block1.m(if_block1_anchor.parentNode, if_block1_anchor);
-    				}
-    			} else if (if_block1) {
-    				group_outros();
-
-    				transition_out(if_block1, 1, 1, () => {
-    					if_block1 = null;
-    				});
-
-    				check_outros();
-    			}
-    		},
+    		p: noop,
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(if_block0);
+    			transition_in(if_block);
     			transition_in(statelist.$$.fragment, local);
-    			transition_in(if_block1);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(if_block0);
+    			transition_out(if_block);
     			transition_out(statelist.$$.fragment, local);
-    			transition_out(if_block1);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div4);
-    			if (if_block0) if_block0.d();
+    			if (detaching) detach_dev(div2);
+    			if (if_block) if_block.d();
     			destroy_component(statelist);
-    			if (detaching) detach_dev(t3);
-    			if (if_block1) if_block1.d(detaching);
-    			if (detaching) detach_dev(if_block1_anchor);
-    			dispose();
     		}
     	};
 
@@ -1989,14 +1741,14 @@ var app = (function () {
     		block,
     		id: create_else_block$1.name,
     		type: "else",
-    		source: "(88:0) {:else}",
+    		source: "(66:0) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (86:0) {#if $selectedState}
+    // (64:0) {#if $selectedState}
     function create_if_block$3(ctx) {
     	let current;
     	const stateinfo = new StateInfo({ $$inline: true });
@@ -2028,15 +1780,15 @@ var app = (function () {
     		block,
     		id: create_if_block$3.name,
     		type: "if",
-    		source: "(86:0) {#if $selectedState}",
+    		source: "(64:0) {#if $selectedState}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (91:2) {#if supportsGeolocation()}
-    function create_if_block_2$1(ctx) {
+    // (69:2) {#if supportsGeolocation()}
+    function create_if_block_1$2(ctx) {
     	let current;
     	const statelocator = new StateLocator({ $$inline: true });
 
@@ -2064,135 +1816,16 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_if_block_2$1.name,
-    		type: "if",
-    		source: "(91:2) {#if supportsGeolocation()}",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (104:1) {#if showModal}
-    function create_if_block_1$2(ctx) {
-    	let current;
-
-    	const aboutmodal = new AboutModal({
-    			props: {
-    				$$slots: { default: [create_default_slot] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	aboutmodal.$on("close", /*close_handler*/ ctx[3]);
-
-    	const block = {
-    		c: function create() {
-    			create_component(aboutmodal.$$.fragment);
-    		},
-    		m: function mount(target, anchor) {
-    			mount_component(aboutmodal, target, anchor);
-    			current = true;
-    		},
-    		p: function update(ctx, dirty) {
-    			const aboutmodal_changes = {};
-
-    			if (dirty & /*$$scope*/ 16) {
-    				aboutmodal_changes.$$scope = { dirty, ctx };
-    			}
-
-    			aboutmodal.$set(aboutmodal_changes);
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(aboutmodal.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(aboutmodal.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			destroy_component(aboutmodal, detaching);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
     		id: create_if_block_1$2.name,
     		type: "if",
-    		source: "(104:1) {#if showModal}",
+    		source: "(69:2) {#if supportsGeolocation()}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (105:1) <AboutModal on:close="{() => showModal = false}">
-    function create_default_slot(ctx) {
-    	let div;
-    	let ol;
-    	let li0;
-    	let t1;
-    	let li1;
-    	let t3;
-    	let li2;
-    	let t4;
-    	let a;
-
-    	const block = {
-    		c: function create() {
-    			div = element("div");
-    			ol = element("ol");
-    			li0 = element("li");
-    			li0.textContent = "PRIMARYVOTE.US DOESN'T STORE ANY DATA ABOUT YOU";
-    			t1 = space();
-    			li1 = element("li");
-    			li1.textContent = "IT DOESN’T EVEN USE GOOGLE FOR GEOLOCATION";
-    			t3 = space();
-    			li2 = element("li");
-    			t4 = text("MADE BY");
-    			a = element("a");
-    			a.textContent = "@KARTIKHELPS";
-    			add_location(li0, file$6, 107, 4, 1913);
-    			add_location(li1, file$6, 108, 4, 1974);
-    			attr_dev(a, "href", "https://twitter.com/kartikhelps");
-    			add_location(a, file$6, 109, 15, 2041);
-    			add_location(li2, file$6, 109, 4, 2030);
-    			attr_dev(ol, "class", "definition-list");
-    			add_location(ol, file$6, 106, 3, 1880);
-    			attr_dev(div, "class", "about-modal svelte-lk1znx");
-    			add_location(div, file$6, 105, 2, 1851);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, div, anchor);
-    			append_dev(div, ol);
-    			append_dev(ol, li0);
-    			append_dev(ol, t1);
-    			append_dev(ol, li1);
-    			append_dev(ol, t3);
-    			append_dev(ol, li2);
-    			append_dev(li2, t4);
-    			append_dev(li2, a);
-    		},
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot.name,
-    		type: "slot",
-    		source: "(105:1) <AboutModal on:close=\\\"{() => showModal = false}\\\">",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    function create_fragment$6(ctx) {
+    function create_fragment$5(ctx) {
     	let html;
     	let meta;
     	let t;
@@ -2204,7 +1837,7 @@ var app = (function () {
     	const if_blocks = [];
 
     	function select_block_type(ctx, dirty) {
-    		if (/*$selectedState*/ ctx[1]) return 0;
+    		if (/*$selectedState*/ ctx[0]) return 0;
     		return 1;
     	}
 
@@ -2220,10 +1853,10 @@ var app = (function () {
     			if_block_anchor = empty();
     			document.title = "Can I Still Vote? - PrimaryVote.US";
     			attr_dev(html, "lang", "en");
-    			add_location(html, file$6, 80, 1, 1335);
+    			add_location(html, file$5, 58, 1, 956);
     			attr_dev(meta, "name", "viewport");
-    			attr_dev(meta, "content", "width=device-width, initial-scale=1.0");
-    			add_location(meta, file$6, 81, 1, 1355);
+    			attr_dev(meta, "content", "width=device-width, initial-scale=1");
+    			add_location(meta, file$5, 59, 1, 976);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -2281,7 +1914,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_fragment$6.name,
+    		id: create_fragment$5.name,
     		type: "component",
     		source: "",
     		ctx
@@ -2294,36 +1927,32 @@ var app = (function () {
     	return navigator.geolocation !== null && navigator.geolocation !== undefined;
     }
 
-    function instance$6($$self, $$props, $$invalidate) {
+    function instance$5($$self, $$props, $$invalidate) {
     	let $selectedState;
     	validate_store(selectedState, "selectedState");
-    	component_subscribe($$self, selectedState, $$value => $$invalidate(1, $selectedState = $$value));
-    	let showModal = false;
-    	const click_handler = () => $$invalidate(0, showModal = true);
-    	const close_handler = () => $$invalidate(0, showModal = false);
+    	component_subscribe($$self, selectedState, $$value => $$invalidate(0, $selectedState = $$value));
 
     	$$self.$capture_state = () => {
     		return {};
     	};
 
     	$$self.$inject_state = $$props => {
-    		if ("showModal" in $$props) $$invalidate(0, showModal = $$props.showModal);
     		if ("$selectedState" in $$props) selectedState.set($selectedState = $$props.$selectedState);
     	};
 
-    	return [showModal, $selectedState, click_handler, close_handler];
+    	return [$selectedState];
     }
 
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance$6, create_fragment$6, safe_not_equal, {});
+    		init(this, options, instance$5, create_fragment$5, safe_not_equal, {});
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
     			tagName: "App",
     			options,
-    			id: create_fragment$6.name
+    			id: create_fragment$5.name
     		});
     	}
     }
