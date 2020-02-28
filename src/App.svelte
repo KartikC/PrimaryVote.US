@@ -24,7 +24,7 @@
 	}
 
 	.top {
-        position: absolute;
+        position: relative;
         font-weight: bold;
         font-size: 4vh;
         color: #1835A5;

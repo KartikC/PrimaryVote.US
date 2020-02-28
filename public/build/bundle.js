@@ -1688,13 +1688,13 @@ var app = (function () {
     			div2 = element("div");
     			create_component(statelist.$$.fragment);
     			add_location(span, file$5, 77, 10, 1270);
-    			attr_dev(div0, "class", "top svelte-10ifdcr");
+    			attr_dev(div0, "class", "top svelte-1zg60m");
     			add_location(div0, file$5, 76, 3, 1242);
-    			attr_dev(div1, "class", "header svelte-10ifdcr");
+    			attr_dev(div1, "class", "header svelte-1zg60m");
     			add_location(div1, file$5, 75, 2, 1218);
-    			attr_dev(div2, "class", "main svelte-10ifdcr");
+    			attr_dev(div2, "class", "main svelte-1zg60m");
     			add_location(div2, file$5, 80, 2, 1365);
-    			attr_dev(div3, "class", "wrapper svelte-10ifdcr");
+    			attr_dev(div3, "class", "wrapper svelte-1zg60m");
     			add_location(div3, file$5, 74, 1, 1194);
     		},
     		m: function mount(target, anchor) {
