@@ -93,15 +93,32 @@
 
     .top {
         color: #1835A5;
-        left: 5px;
-        top: 5px;
+        left: 10px;
+        top: 10px;
+        height: 60%;
     }
 
     .locate {
-        color: #1B98E0;
-        position: absolute;
+        font-size: 1em;
+        height: 40%;
         right: 10px;
         bottom: 10px;
+        text-align: right;
+    }
+
+    img {
+        height: 30px;
+    }
+
+    .icon {
+        width: 100%;
+    }
+
+    .locate-text {
+        width: 100%;
+        font-weight: bold;
+        color: #1B98E0;
+        font-size: 1.5em;
     }
 </style>
 
@@ -111,7 +128,8 @@
     </div>
     <div class="locate" on:click={locatePressed}>
     {#if !loadingDenied}
-        <img src={'nav-icon.svg'} alt="nav-icon"/><br/><span class="text">LOCATE ME</span>
+        <div class = "icon"><img src={'nav-icon.svg'} alt="nav-icon"/></div>
+        <div class = "locate-text"><span>LOCATE ME</span></div>
         {#if loadingLocation}
             <img {src} alt="loading...">
         {/if}
