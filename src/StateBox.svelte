@@ -16,28 +16,35 @@
     .box {
         position: relative;
         background-color: #1835A5;
-        margin: 10px;
+        margin-bottom: 1.5em;
         display:inline-block;
-        width: 321px;
-        height: 71px;
-        border: 3px solid #E8F1F2;
+        width: 80%;
+        height: 8em;
+        border: 0.5em solid #E8F1F2;
         box-sizing: border-box;
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.50);
     }
     .name {
-        position: absolute;
         font-weight: bold;
         color: #E8F1F2;
-        left: 5%;
-        top: 30%;
-        font-size: 1.5em;
+        width: 80%;
+        height: 100%;
+        font-size: 3em;
+        text-align: left;
+        padding-left: 1em;
+        line-height: 230%;
+        float: left;
     }
     .number {
-        position: absolute;
         font-weight: bold;
-        right: 5%;
+        width: 20%;
         top: 30%;
-        font-size: 1.5em;
+        height: 100%;
+        font-size: 3em;
+        text-align: right;
+        padding-right: 1em;
+        line-height: 230%;
+        float: right;
     }
 </style>
 

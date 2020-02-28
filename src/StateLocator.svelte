@@ -81,30 +81,32 @@
 
 <style>
     .container {
-        padding: 5px;
         height: 100%;
         position: relative;
     }
 
     .top {
+        position: absolute;
         font-weight: bold;
-        font-size: 2em;
+        font-size: 4vh;
         color: #1835A5;
-        left: 10px;
-        top: 10px;
-        height: 60%;
+        width: 80%;
+        height: 100%;
+        padding:0.25em 0 0 0.25em; 
+        text-align: left;
     }
 
     .locate {
-        font-size: 1em;
+        position: absolute;
+        font-size: 2vh;
         height: 40%;
-        right: 10px;
-        bottom: 10px;
+        right: 0.75em;
+        bottom: -0.5em;
         text-align: right;
     }
 
     img {
-        height: 30px;
+        height: 2em;
     }
 
     .icon {

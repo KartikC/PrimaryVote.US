@@ -65,17 +65,19 @@
 <style>
     .wrapper {
         text-align: center;
+        width: 100%;
     }
 
     .titles {
         position: relative;
-        margin-top: 10px;
-        width: 321px;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        width: 80%;
         display:inline-block;
         font-weight: bold;
-        color: #8F9491;
+        color: #9CAFB7;
         text-align: left;
-        font-size: 1em;
+        font-size: 2em;
         box-sizing: border-box;
     }
 
@@ -89,18 +91,18 @@
 
     .about {
         position: relative;
-        margin: 10px;
-        width: 321px;
+        margin: 1em;
+        width: 80%;
         display:inline-block;
         font-weight: bold;
-        color: #8F9491;
+        color: #9CAFB7;
         text-align: left;
-        font-size: 1em;
+        font-size: 2em;
         box-sizing: border-box;
     }
 
     .about>a {
-        color: #8F9491;
+        color: #BCABAE;
     }
 </style>
 <div class="wrapper">

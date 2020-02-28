@@ -24,7 +24,6 @@
         width: 100%;
         height: 100%;
         position: relative;
-        text-align: center;
     }
 
     .wrapper>.header {
@@ -35,7 +34,8 @@
     .wrapper>.main {
         height: 65%;
         background: #1835A5;
-        overflow: scroll;
+        text-align: center;
+        width: 100%;
     }
 
     .wrapper>.footer {
@@ -45,55 +45,60 @@
 
     .container {
         padding: 5px;
+        text-align: center;
         height: 100%;
-        position: relative;
     }
 
     .top {
+        display: inline-block;
         font-weight: bold;
-        font-size: 2em;
+        font-size: 5vh;
         color: #1835A5;
-        left: 10px;
-        top: 10px;
-        height: 60%;
+        padding-top: 2em;
+    }
+
+    .info {
+        position: relative;
+        margin: 1em;
+        width: 80%;
+        display: inline-block;
+        font-weight: bold;
+        color: #E8F1F2;
+        text-align: left;
+        font-size: 3em;
+        box-sizing: border-box;
+        margin-bottom: 4em;
     }
 
     .box {
         font-weight: bold;
         position: relative;
         background-color: #1835A5;
-        margin: 10px;
+        margin-bottom: 0.5em;
         display: inline-block;
-        width: 321px;
-        height: 71px;
-        border: 3px solid #E8F1F2;
+        width: 80%;
+        height: 3em;
+        border: 0.25em solid #E8F1F2;
         box-sizing: border-box;
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-        font-size: 1.5em;
+        font-size: 3em;
         color: #E8F1F2;
         text-align: center;
-        line-height: 71px;
-    }
-
-    .info {
-        text-align: left;
-        color: #E8F1F2;
-        font-size: 1.5em;
-        font-weight: bold;
+        line-height: 2.5em;
     }
 
     .remind {
         font-weight: bold;
         color: #1B98E0;
         text-align: center;
-        font-size: 1em;
+        font-size: 3em;
     }
 
     .back {
         font-weight: bold;
         color: #BCABAE;
         text-align: center;
-        font-size: 1.5em;
+        font-size: 3em;
     }
 </style>
 

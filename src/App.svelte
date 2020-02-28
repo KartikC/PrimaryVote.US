@@ -29,8 +29,8 @@
 	}
 
 	:global(html) {
+		font-size: 2vw;
 		box-sizing: border-box;
-		font-size: 16px;
 	}
 
 	:global(*, *:before, *:after) {
