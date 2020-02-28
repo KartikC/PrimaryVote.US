@@ -4,13 +4,13 @@
     } from "svelte";
 
     import {
-        selectedState, stateData
+        selectedState,
+        stateData
     } from './stores.js';
 
     let stateLocs = [];
     let currentLocation = null;
     let loadingLocation = false;
-    let loadingDenied = false;
     let src = 'temp-loader.gif';
 
     onMount(async () => {
@@ -59,7 +59,7 @@
         currentLocation["lat"] = pos.coords.latitude;
         currentLocation["lon"] = pos.coords.longitude;
         loadingLocation = false;
-        selectedState.set($stateData[getState()["code"]]);
+        selectedState.set($stateData.find( element => element.code ==  getState()["code"]));
     }
 
     function error(err) {
@@ -77,10 +77,54 @@
         getLocation();
     }
 </script>
-{#if !loadingDenied}
-    <button on:click={locatePressed}>Locate Me!</button>
-    {#if loadingLocation}
-        <img {src} alt="loading...">
-    {/if}
-    <div>-or-</div>
-{/if}
+
+<style>
+    .box {
+        position: relative;
+        background-color: #1835A5;
+        margin-bottom: 1.5em;
+        display:inline-block;
+        width: 80%;
+        height: 8em;
+        border: 0.5em solid #1B98E0;
+        box-sizing: border-box;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.50);
+    }
+    .name {
+        font-weight: bold;
+        color: #1B98E0;
+        width: 80%;
+        height: 100%;
+        font-size: 3em;
+        text-align: left;
+        padding-left: 1em;
+        line-height: 230%;
+        float: left;
+    }
+    .number {
+        font-weight: bold;
+        width: 20%;
+        top: 30%;
+        height: 100%;
+        font-size: 3em;
+        text-align: right;
+        padding-right: 1em;
+        line-height: 260%;
+        float: right;
+    }
+
+    img {
+        height: 1em;
+    }
+</style>
+
+
+<div class="box" on:click={locatePressed}>
+    <div class = "name">
+        <span>LOCATE ME</span>
+        {#if loadingLocation}
+            <img {src} alt="loading...">
+        {/if}
+    </div>
+    <div class = "number"><img src={'nav-icon.svg'} alt="nav-icon"/></div>
+</div>

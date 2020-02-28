@@ -1,5 +1,4 @@
-{
-  "AK": {
+[{
     "name": "Alaska",
     "code": "AK",
     "dates": {
@@ -8,7 +7,7 @@
       "mail": "2020-03-05"
     }
   },
-  "AL": {
+  {
     "name": "Alabama",
     "code": "AL",
     "dates": {
@@ -17,7 +16,7 @@
       "mail": "2020-02-17"
     }
   },
-  "AR": {
+  {
     "name": "Arkansas",
     "code": "AR",
     "dates": {
@@ -25,7 +24,7 @@
       "mail": "2020-02-04"
     }
   },
-  "AZ": {
+  {
     "name": "Arizona",
     "code": "AZ",
     "dates": {
@@ -33,7 +32,7 @@
       "mail": "2020-02-03"
     }
   },
-  "CA": {
+  {
     "name": "California",
     "code": "CA",
     "dates": {
@@ -42,7 +41,7 @@
       "mail": "2020-02-17"
     }
   },
-  "CO": {
+  {
     "name": "Colorado",
     "code": "CO",
     "dates": {
@@ -51,7 +50,7 @@
       "mail": "2020-02-24"
     }
   },
-  "CT": {
+  {
     "name": "Connecticut",
     "code": "CT",
     "dates": {
@@ -60,13 +59,412 @@
       "mail": "2020-04-23"
     }
   },
-  "DC": {
-    "name": "District of Columbia",
+  {
+    "name": "DC",
     "code": "DC",
     "dates": {
       "person": "2020-06-02",
       "online": "2020-5-12",
       "mail": "2020-05-12"
     }
+  },
+  {
+    "name": "Delaware",
+    "code": "DE",
+    "dates": {
+      "person": "2020-04-04",
+      "online": "2020-04-04",
+      "mail": "2020-04-04"
+    }
+  },
+  {
+    "name": "Florida",
+    "code": "FL",
+    "dates": {
+      "person": "2020-02-18",
+      "online": "2020-02-18",
+      "mail": "2020-02-18"
+    }
+  },
+  {
+    "name": "Georgia",
+    "code": "GA",
+    "dates": {
+      "person": "2020-02-24",
+      "online": "2020-02-24",
+      "mail": "2020-02-24"
+    }
+  },
+  {
+    "name": "Guam",
+    "code": "GU",
+    "dates": {
+      "person": "2020-04-22",
+      "mail": "2020-04-22"
+    }
+  },
+  {
+    "name": "Hawaii",
+    "code": "HI",
+    "dates": {
+      "person": "2020-03-05",
+      "online": "2020-03-05",
+      "mail": "2020-03-05"
+    }
+  },
+  {
+    "name": "Iowa",
+    "code": "IA",
+    "dates": {
+      "person": "2020-02-03",
+      "online": "2020-01-24",
+      "mail": "2020-01-19"
+    }
+  },
+  {
+    "name": "Idaho",
+    "code": "ID",
+    "dates": {
+      "person": "2020-03-10",
+      "online": "2020-02-28",
+      "mail": "2020-02-14"
+    }
+  },
+  {
+    "name": "Illinois",
+    "code": "IL",
+    "dates": {
+      "person": "2020-03-17",
+      "online": "2020-02-29",
+      "mail": "2020-02-18"
+    }
+  },
+  {
+    "name": "Indiana",
+    "code": "IN",
+    "dates": {
+      "person": "2020-04-06",
+      "online": "2020-04-06",
+      "mail": "2020-04-06"
+    }
+  },
+  {
+    "name": "Kansas",
+    "code": "KS",
+    "dates": {
+      "person": "2020-05-02",
+      "online": "2020-04-11",
+      "mail": "2020-04-25"
+    }
+  },
+  {
+    "name": "Kentucky",
+    "code": "KY",
+    "dates": {
+      "person": "2020-04-20",
+      "online": "2020-04-20",
+      "mail": "2020-04-20"
+    }
+  },
+  {
+    "name": "Massachusetts",
+    "code": "MA",
+    "dates": {
+      "person": "2020-02-12",
+      "online": "2020-02-12",
+      "mail": "2020-02-12"
+    }
+  },
+  {
+    "name": "Maryland",
+    "code": "MD",
+    "dates": {
+      "person": "2020-04-28",
+      "online": "2020-04-07",
+      "mail": "2020-04-07"
+    }
+  },
+  {
+    "name": "Maine",
+    "code": "ME",
+    "dates": {
+      "person": "2020-03-03",
+      "mail": "2020-02-10"
+    }
+  },
+  {
+    "name": "Michigan",
+    "code": "MI",
+    "dates": {
+      "person": "2020-02-24",
+      "online": "2020-02-24",
+      "mail": "2020-02-24"
+    }
+  },
+  {
+    "name": "Minnesota",
+    "code": "MN",
+    "dates": {
+      "person": "2020-03-03",
+      "online": "2020-02-11",
+      "mail": "2020-02-11"
+    }
+  },
+  {
+    "name": "Missouri",
+    "code": "MO",
+    "dates": {
+      "person": "2020-02-12",
+      "online": "2020-02-12",
+      "mail": "2020-02-12"
+    }
+  },
+  {
+    "name": "Northern Mariana",
+    "code": "MP",
+    "dates": {
+      "person": "2020-01-14",
+      "mail": "2020-01-14"
+    }
+  },
+  {
+    "name": "Mississippi",
+    "code": "MS",
+    "dates": {
+      "person": "2020-02-10",
+      "mail": "2020-02-10"
+    }
+  },
+  {
+    "name": "Montana",
+    "code": "MT",
+    "dates": {
+      "person": "2020-06-02",
+      "mail": "2020-05-04"
+    }
+  },
+  {
+    "name": "North Carolina",
+    "code": "NC",
+    "dates": {
+      "person": "2020-03-03",
+      "mail": "2020-02-07"
+    }
+  },
+  {
+    "name": "North Dakota",
+    "code": "ND",
+    "dates": {
+      "person": "2020-03-10",
+      "mail": "2020-02-10"
+    }
+  },
+  {
+    "name": "Nebraska",
+    "code": "NE",
+    "dates": {
+      "person": "2020-05-01",
+      "online": "2020-04-24",
+      "mail": "2020-04-24"
+    }
+  },
+  {
+    "name": "New Hampshire",
+    "code": "NH",
+    "dates": {
+      "person": "2020-02-11",
+      "mail": "2020-02-04"
+    }
+  },
+  {
+    "name": "New Jersey",
+    "code": "NJ",
+    "dates": {
+      "person": "2020-05-12",
+      "mail": "2020-05-12"
+    }
+  },
+  {
+    "name": "New Mexico",
+    "code": "NM",
+    "dates": {
+      "person": "2020-05-05",
+      "online": "2020-05-05",
+      "mail": "2020-05-05"
+    }
+  },
+  {
+    "name": "Nevada",
+    "code": "NV",
+    "dates": {
+      "person": "2020-02-22",
+      "online": "2020-02-03",
+      "mail": "2020-01-29"
+    }
+  },
+  {
+    "name": "New York",
+    "code": "NY",
+    "dates": {
+      "person": "2020-04-03",
+      "online": "2020-04-03",
+      "mail": "2020-04-03"
+    }
+  },
+  {
+    "name": "Ohio",
+    "code": "OH",
+    "dates": {
+      "person": "2020-02-17",
+      "online": "2020-02-17",
+      "mail": "2020-02-17"
+    }
+  },
+  {
+    "name": "Oklahoma",
+    "code": "OK",
+    "dates": {
+      "person": "2020-02-07",
+      "mail": "2020-02-07"
+    }
+  },
+  {
+    "name": "Oregon",
+    "code": "OR",
+    "dates": {
+      "person": "2020-04-28",
+      "online": "2020-04-28",
+      "mail": "2020-04-28"
+    }
+  },
+  {
+    "name": "Pennsylvania",
+    "code": "PA",
+    "dates": {
+      "person": "2020-03-30",
+      "online": "2020-03-30",
+      "mail": "2020-03-30"
+    }
+  },
+  {
+    "name": "Puerto Rico",
+    "code": "PR",
+    "dates": {
+      "person": "2020-02-08",
+      "mail": "2020-02-08"
+    }
+  },
+  {
+    "name": "Rhode Island",
+    "code": "RI",
+    "dates": {
+      "person": "2020-03-29",
+      "online": "2020-03-29",
+      "mail": "2020-03-29"
+    }
+  },
+  {
+    "name": "South Carolina",
+    "code": "SC",
+    "dates": {
+      "person": "2020-01-30",
+      "online": "2020-01-30",
+      "mail": "2020-01-30"
+    }
+  },
+  {
+    "name": "South Dakota",
+    "code": "SD",
+    "dates": {
+      "person": "2020-05-18",
+      "mail": "2020-05-18"
+    }
+  },
+  {
+    "name": "Tennessee",
+    "code": "TN",
+    "dates": {
+      "person": "2020-02-03",
+      "online": "2020-02-03",
+      "mail": "2020-02-03"
+    }
+  },
+  {
+    "name": "Texas",
+    "code": "TX",
+    "dates": {
+      "person": "2020-02-03",
+      "mail": "2020-02-03"
+    }
+  },
+  {
+    "name": "Utah",
+    "code": "UT",
+    "dates": {
+      "person": "2020-03-03",
+      "online": "2020-02-25",
+      "mail": "2020-02-02"
+    }
+  },
+  {
+    "name": "Virginia",
+    "code": "VA",
+    "dates": {
+      "person": "2020-02-10",
+      "online": "2020-02-10",
+      "mail": "2020-02-10"
+    }
+  },
+  {
+    "name": "Virgin Islands",
+    "code": "VI",
+    "dates": {
+      "person": "2020-05-07",
+      "mail": "2020-05-07"
+    }
+  },
+  {
+    "name": "Vermont",
+    "code": "VT",
+    "dates": {
+      "person": "2020-03-03",
+      "online": "2020-03-03",
+      "mail": "2020-03-03"
+    }
+  },
+  {
+    "name": "Washington",
+    "code": "WA",
+    "dates": {
+      "person": "2020-03-10",
+      "online": "2020-03-02",
+      "mail": "2020-03-02"
+    }
+  },
+  {
+    "name": "Wisconsin",
+    "code": "WI",
+    "dates": {
+      "person": "2020-04-07",
+      "online": "2020-03-18",
+      "mail": "2020-03-18"
+    }
+  },
+  {
+    "name": "West Virginia",
+    "code": "WV",
+    "dates": {
+      "person": "2020-04-21",
+      "online": "2020-04-21",
+      "mail": "2020-04-21"
+    }
+  },
+  {
+    "name": "Wyoming",
+    "code": "WY",
+    "dates": {
+      "person": "2020-04-04",
+      "mail": "2020-03-20"
+    }
   }
-}
+]

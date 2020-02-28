@@ -17,19 +17,10 @@
             r = 255;
             g = Math.floor(255 * ((50 - number % 50) / 50));
         }
-        b = 0;
+        b = 100;
 
         return `${r},${g},${b}`;
     }
 </script>
 
-<style>
-    .day {
-        font-weight: bold;
-        font-size: 8em;
-    }
-</style>
-
-You have
-<span style="color:rgb({GreenYellowRed(days)})" class="day">{days}</span>
-days to register <b>{type}</b>
+<span style="color:rgb({GreenYellowRed(days)})">{days}</span>
