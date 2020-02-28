@@ -65,6 +65,7 @@
 <style>
     .wrapper {
         text-align: center;
+        width: 480px;
     }
 
     .titles {

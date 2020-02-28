@@ -761,7 +761,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (103:4) {#each Object.entries(tempData) as state}
+    // (104:4) {#each Object.entries(tempData) as state}
     function create_each_block(ctx) {
     	let current;
 
@@ -801,7 +801,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(103:4) {#each Object.entries(tempData) as state}",
+    		source: "(104:4) {#each Object.entries(tempData) as state}",
     		ctx
     	});
 
@@ -866,24 +866,24 @@ var app = (function () {
     			a.textContent = "@KARTIKHELPS";
     			br4 = element("br");
     			attr_dev(div0, "class", "left");
-    			add_location(div0, file$2, 99, 8, 2423);
+    			add_location(div0, file$2, 100, 8, 2445);
     			attr_dev(div1, "class", "left");
-    			add_location(div1, file$2, 100, 8, 2461);
-    			attr_dev(div2, "class", "titles svelte-1xe597k");
-    			add_location(div2, file$2, 98, 4, 2394);
-    			add_location(br0, file$2, 106, 56, 2675);
-    			add_location(br1, file$2, 106, 61, 2680);
-    			add_location(br2, file$2, 107, 50, 2736);
-    			add_location(br3, file$2, 107, 55, 2741);
+    			add_location(div1, file$2, 101, 8, 2483);
+    			attr_dev(div2, "class", "titles svelte-19mrt6f");
+    			add_location(div2, file$2, 99, 4, 2416);
+    			add_location(br0, file$2, 107, 56, 2697);
+    			add_location(br1, file$2, 107, 61, 2702);
+    			add_location(br2, file$2, 108, 50, 2758);
+    			add_location(br3, file$2, 108, 55, 2763);
     			attr_dev(a, "href", "https://twitter.com/kartikhelps");
     			attr_dev(a, "target", "_blank");
-    			attr_dev(a, "class", "svelte-1xe597k");
-    			add_location(a, file$2, 108, 16, 2763);
-    			add_location(br4, file$2, 108, 90, 2837);
-    			attr_dev(div3, "class", "about svelte-1xe597k");
-    			add_location(div3, file$2, 105, 4, 2599);
-    			attr_dev(div4, "class", "wrapper svelte-1xe597k");
-    			add_location(div4, file$2, 97, 0, 2368);
+    			attr_dev(a, "class", "svelte-19mrt6f");
+    			add_location(a, file$2, 109, 16, 2785);
+    			add_location(br4, file$2, 109, 90, 2859);
+    			attr_dev(div3, "class", "about svelte-19mrt6f");
+    			add_location(div3, file$2, 106, 4, 2621);
+    			attr_dev(div4, "class", "wrapper svelte-19mrt6f");
+    			add_location(div4, file$2, 98, 0, 2390);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
