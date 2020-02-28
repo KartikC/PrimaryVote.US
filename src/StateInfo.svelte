@@ -12,7 +12,40 @@
         selectedState_value = value;
     });
 
-    let bestOptionResult = selectedState_value['bestOption']
+    let bestOptionResult = selectedState_value['bestOption'];
+
+    function makeShareData() {
+        const shareData = {
+            title: 'Do you plan on voting in your primary?',
+            text: '',
+            url: 'https://PrimaryVote.US'
+        };
+        if (bestOptionResult) {
+            shareData.text = `Registration to vote in ${$selectedState.name} ends in ${bestOptionResult[0]} days!`;
+        } else {
+            shareData.text =
+                `Registration to vote in ${$selectedState.name} may be over, but you can still check online.`;
+        }
+        return shareData;
+    }
+
+    async function nativeShare() {
+        const shareData = makeShareData();
+        try {
+            await navigator.share(shareData);
+        } catch (err) {
+            console.warn(err);
+            var share_uri = 'https://www.addtoany.com/share#url=&title=';
+            var share_uri = `https://www.addtoany.com/share#url=${shareData.url}&title=${shareData.text}`;
+            var wo = window.open(
+                'about:blank',
+                null,
+                'height=500,width=500'
+            );
+            wo.opener = null;
+            wo.location = share_uri;
+        }
+    }
 
     function resetState() {
         selectedState.set(null);
@@ -41,7 +74,11 @@
 
     .wrapper>.footer {
         height: 10%;
+        width: 100%;
         background: #1835A5;
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 0 5em 0 5em;
     }
 
     .container {
@@ -68,7 +105,7 @@
         text-align: left;
         font-size: 3em;
         box-sizing: border-box;
-        margin-bottom: 4em;
+        margin-bottom: 3em;
     }
 
     .box {
@@ -95,11 +132,18 @@
         font-size: 3em;
     }
 
-    .back {
+    .footer-text {
         font-weight: bold;
         color: #BCABAE;
-        text-align: center;
         font-size: 3em;
+    }
+
+    .back {
+        float: left;
+    }
+
+    .share {
+        float: right;
     }
 </style>
 
@@ -133,8 +177,11 @@
         {/if}
     </div>
     <div class = "footer">
-        <div on:click={resetState} class="back">
+        <div on:click={resetState} class="footer-text back">
             BACK
+        </div>
+        <div on:click={nativeShare} class="footer-text share">
+            SHARE
         </div>
     </div>
 </div>

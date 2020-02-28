@@ -7,33 +7,34 @@
         stateData
     } from './stores.js';
 
-    let tempData = []
+    let tempData = [];
+    let listLoaded = false;
 
     import StateLocator from './StateLocator.svelte'
     import StateBox from './StateBox.svelte';
 
     function supportsGeolocation() {
-		return ((navigator.geolocation !== null) && (navigator.geolocation !== undefined));
-	}
+        return ((navigator.geolocation !== null) && (navigator.geolocation !== undefined));
+    }
 
     function getDaysUntil(date) {
         let daysUntil = Math.floor((date - new Date()) / (1000 * 60 * 60 * 24))
         if (daysUntil >= 0) {
-            return daysUntil
+            return daysUntil;
         } else {
-            return null
+            return null;
         }
     }
 
     function bestOption(onlineDate, mailDate, personDate) {
         if (getDaysUntil(onlineDate)) {
-            return [getDaysUntil(onlineDate), "online"]
+            return [getDaysUntil(onlineDate), "online"];
         } else if (getDaysUntil(mailDate)) {
-            return [getDaysUntil(mailDate), "by mail"]
+            return [getDaysUntil(mailDate), "by mail"];
         } else if (getDaysUntil(personDate)) {
-            return [getDaysUntil(personDate), "in person"]
+            return [getDaysUntil(personDate), "in perso;n"]
         } else
-            return null
+            return null;
     }
 
     function compareBestOptions(a, b) {
@@ -62,8 +63,9 @@
 
             element['bestOption'] = bestOption(onlineDate, mailDate, personDate);
         });
-        //tempData.sort(compareBestOptions);
+        //tempData.sort(compareBestOptions); not sorting by days left
         stateData.set(tempData);
+        listLoaded = true;
     });
 </script>
 
@@ -75,10 +77,10 @@
 
     .titles {
         position: relative;
-        margin-top: 1em;
+        margin-top: 0.75em;
         margin-bottom: 0.5em;
         width: 80%;
-        display:inline-block;
+        display: inline-block;
         font-weight: bold;
         color: #9CAFB7;
         text-align: left;
@@ -98,7 +100,7 @@
         position: relative;
         margin: 1em;
         width: 80%;
-        display:inline-block;
+        display: inline-block;
         font-weight: bold;
         color: #9CAFB7;
         text-align: left;
@@ -111,19 +113,21 @@
     }
 </style>
 <div class="wrapper">
+    {#if supportsGeolocation()}
+		<StateLocator/>
+	{/if}
     <div class="titles">
         <div class="left">STATE</div>
         <div class="right">DAYS LEFT</div>
     </div>
-    {#if supportsGeolocation()}
-		<StateLocator/>
-	{/if}
     {#each Object.entries(tempData) as state}
         <StateBox data={state[1]}/>
     {/each}
-    <div class="about">
-        PRIMARYVOTE.US DOES NOT STORE ANY INFO ABOUT YOU<br/><br/>
-        IT DOESN'T EVEN USE GOOGLE FOR GEOLOCATION<br/><br/>
-        MADE BY <a href="https://twitter.com/kartikhelps" target="_blank">@KARTIKHELPS</a><br/>
-    </div>
+    {#if listLoaded}
+        <div class="about">
+            PRIMARYVOTE.US DOES NOT STORE ANY INFO ABOUT YOU<br/><br/>
+            IT DOESN'T EVEN USE GOOGLE FOR GEOLOCATION<br/><br/>
+            MADE BY <a href="https://twitter.com/kartikhelps" target="_blank">@KARTIKHELPS</a><br/>
+        </div>
+    {/if}
 </div>

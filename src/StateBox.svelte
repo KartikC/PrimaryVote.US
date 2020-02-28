@@ -52,6 +52,10 @@
     .check {
         color: #E8F1F2;
     }
+
+    img {
+        height: 1em;
+    }
 </style>
 
 <div on:click={handleClick(data)} class="box">
@@ -59,6 +63,6 @@
     {#if data.bestOption}
         <div class="number"><Countdown data={data.bestOption}/></div>
     {:else}
-        <div class="number check">✔</div>
+        <div class="number check"><img src={'done-icon.svg'} alt="done-icon"/></div>
     {/if}
 </div>

@@ -86,6 +86,7 @@
         display:inline-block;
         width: 80%;
         height: 8em;
+        margin-top: 1.5em;
         border: 0.5em solid #1B98E0;
         box-sizing: border-box;
         box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.50);
