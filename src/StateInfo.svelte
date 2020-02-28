@@ -36,6 +36,7 @@
         background: #1835A5;
         text-align: center;
         width: 100%;
+        overflow: scroll;
     }
 
     .wrapper>.footer {
