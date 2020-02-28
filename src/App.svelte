@@ -29,6 +29,7 @@
 	}
 
 	.wrapper {
+		
 		width: 100%;
 		height: 100%;
 	}
@@ -46,7 +47,6 @@
 
 	.top {
 		position: relative;
-		font-family: 'SFProDisplay';
 		font-weight: bold;
 		font-size: 3.75vh;
 		color: #1835A5;
@@ -54,6 +54,10 @@
 		height: 100%;
 		padding: 0.25em 0 0 0.25em;
 		text-align: left;
+	}
+
+	:global(body) {
+		font-family: 'SFProDisplay', sans-serif;
 	}
 
 	:global(html) {
