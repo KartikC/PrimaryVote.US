@@ -8,7 +8,7 @@
 
 <style>
 	.wrapper {
-		
+
 		width: 100%;
 		height: 100%;
 	}
@@ -50,6 +50,7 @@
 		margin: 0;
 		padding: 0;
 		font-weight: normal;
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 		overflow: hidden;
 	}
 
