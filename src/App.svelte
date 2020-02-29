@@ -1,11 +1,9 @@
 <script>
 	import StateList from './StateList.svelte'
 	import StateInfo from './StateInfo.svelte'
-	import TooWide from './TooWide.svelte'
 	import {
 		selectedState
 	} from './stores.js';
-	let w = 50;
 </script>
 
 <style>
@@ -42,6 +40,17 @@
 		overflow: hidden;
 	}
 
+	@media only screen and (min-width: 1025px) {
+		:global(html) {
+			font-size: 1.5vh;
+		}
+
+		.top {
+			font-size: 5vh;
+			width: 60%;
+		}
+	}
+
 	:global(*, *:before, *:after) {
 		box-sizing: inherit;
 	}
@@ -70,22 +79,17 @@
 	<html lang="en" />
 </svelte:head>
 
-<div bind:clientWidth={w}></div>
-{#if w < 1100}
-	{#if $selectedState}
-		<StateInfo/>
-	{:else}
-		<div class="wrapper"> 
-			<div class="header">
-				<div class="top">
-					<span>HOW MANY DAYS ARE LEFT TO REGISTER TO VOTE IN MY PRIMARY?</span>
-				</div>
-			</div>
-			<div class="main">
-				<StateList/>
+{#if $selectedState}
+	<StateInfo/>
+{:else}
+	<div class="wrapper"> 
+		<div class="header">
+			<div class="top">
+				<span>HOW MANY DAYS ARE LEFT TO REGISTER TO VOTE IN MY PRIMARY?</span>
 			</div>
 		</div>
-	{/if}
-{:else}
-	<TooWide/>
+		<div class="main">
+			<StateList/>
+		</div>
+	</div>
 {/if}
